@@ -1,53 +1,55 @@
+<div class="banner">
+    <h1 class="banner-head">
+		Let's Go!
+    </h1>
+</div>
 
 
+<div class="row-fluid">
+<div class="span4 offset4">
+<div class="signup">
 <h2>Sign up</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div class="devise-error-messages">
+
+<% @user.errors.each do |attr, msg| %>
+  <%= "#{attr} #{msg}"  %> <br>
+<% end %>
+
+</div>
+	
 		
 <form>
 
     <fieldset>
-        <div class="pure-control-group">
             <label for="name">First Name</label>
              <%= f.text_field :firstname %>
-        </div>
 
-		  <div class="pure-control-group">
-	            <label for="name">Last Name</label>
-	             <%= f.text_field :lastname %>
-	        </div>
+	         <label for="name">Last Name</label>
+	         <%= f.text_field :lastname %>
 
-        <div class="pure-control-group">
             <label for="email">Email Address</label>
             <%= f.email_field :email %>
-        </div>
 
-        <div class="pure-control-group">
             <label for="zipdcode">Zipcode</label>
               <%= f.text_field :zipcode %>
-        </div>
 
-		<div class="pure-control-group">
             <label for="password">Password</label>
             <%= f.password_field :password %>
-        </div>
+			<br>
 
-			<div class="pure-control-group">
-	            <label for="password">Confirm Password</label>
-	              <%= f.password_field :password_confirmation %></div>
-	        </div>
-  		</div>  
-            <button type="submit" class="pure-button pure-button-primary">Submit</button>
-  
+			<button type="submit" class="pure-button pure-button-primary">Submit</button>
+			
     </fieldset>
-
-
-
-
 
 
 <% end %>
 
-<%= render "devise/shared/links" %>
+
+
 </form>
+
+</div>
+</div>
+</div>

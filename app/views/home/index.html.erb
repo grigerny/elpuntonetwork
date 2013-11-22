@@ -55,6 +55,9 @@
 
 <div class="footer">
     <p class="l-box">
-        <a href="#">Become a partner</a> Header image courtesy of <a href='http://unsplash.com/'>Unsplash</a>.
+        <a href="#">Become a partner</a> Header image courtesy of <a href='http://unsplash.com/'>Unsplash</a>.  
+<% if user_signed_in? %>
+<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% end %>
     </p>
 </div>

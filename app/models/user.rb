@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :firstname, :lastname, :zipcode, :password, :password_confirmation, :remember_me
   
+  validates_presence_of :firstname, :lastname, :zipcode
+  validates_format_of :zipcode, :with => /^\d{5}(-\d{4})?$/, :message => "should be valid"
+  
+
 end
