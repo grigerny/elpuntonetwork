@@ -8,6 +8,7 @@
  */
 body {
     color: #526066;
+    font-family: 'helvetica';
 }
 
 h2, h3 {
@@ -37,7 +38,9 @@ p {
  * Make the menu have a very faint box-shadow.
  */
 .pure-menu {
+	margin-top:15px;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+    font-size:16px;
 }
 
 
@@ -61,10 +64,10 @@ p {
         display: table-cell;
         vertical-align: middle;
         margin-bottom: 0;
-        font-size: 4em;
         color: white;
         font-weight: 500;
         text-shadow: 0 1px 1px black;
+		font-size:64px;
     }
 
 
@@ -116,8 +119,9 @@ p {
     .pricing-table-header h2 {
         margin: 0;
         padding-top: 2em;
-        font-size: 1em;
+        font-size: 16px;
         font-weight: normal;
+		margin-bottom:2em;
 
     }
 
@@ -127,14 +131,16 @@ p {
  * Styles for the price and the corresponding <span>per month</span>
  */
 .pricing-table-price {
-    font-size: 6em;
-    margin: 0.2em 0 0;
+    font-size: 7em;
+    margin-top: 0.2em 0 0;
     font-weight: 100;
+	font-height: 40px;
 }
     .pricing-table-price span {
         display: block;
         text-transform: uppercase;
         font-size: 0.2em;
+		padding-top: 20px;
         padding-bottom: 2em;
         font-weight: 400;
         color: rgba(255, 255, 255, 0.5);
@@ -152,6 +158,7 @@ p {
     margin: 0;
     padding: 0;
     text-align: center;
+	font-size:16px;
 }
 
 
@@ -179,15 +186,18 @@ p {
     font-weight: bold;
     position: relative;
     bottom: -1.5em;
+    font-size:16px;
 }
 
 .information-head {
     color: black;
     font-weight: 500;
+    font-size:19px;
 }
 
 .information-head-p{
 	text-align: left;
+	font-size:16px;
 }
 
 .membership-card{
@@ -197,9 +207,11 @@ p {
     background: black;
     color: #888;
     text-align: center;
+    font-size:16px;
 }
     .footer a {
         color: #ddd;
+		font-size:16px;
     }
 
 

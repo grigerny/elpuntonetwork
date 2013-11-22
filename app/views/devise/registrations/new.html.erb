@@ -4,8 +4,9 @@
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+		
+<form>
 
-<form class="pure-form pure-form-aligned">
     <fieldset>
         <div class="pure-control-group">
             <label for="name">First Name</label>
@@ -36,10 +37,14 @@
 	            <label for="password">Confirm Password</label>
 	              <%= f.password_field :password_confirmation %></div>
 	        </div>
-
+  		</div>  
             <button type="submit" class="pure-button pure-button-primary">Submit</button>
-        </div>
+  
     </fieldset>
+
+
+
+
 
 
 <% end %>
