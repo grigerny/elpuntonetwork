@@ -19,11 +19,10 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   gem 'purecss-rails'
-  gem 'rails_12factor'
 end
 
 gem 'jquery-rails'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'rails_12factor'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
