@@ -11,38 +11,36 @@
 						<div class="information-head-p">
 							  <h3 class="information-head">Come in, We're Open!</h3>
 		                <p>
-		                    Now serving Queens, Manhattan and Long Island. <br><br>When you sign up, you will get an electronic membership card. Use this card in your neighborhood to receive discounts, promotions and exclusive access to private events from our partners. <br><br>It's that simple.
+		                    Now serving Queens, Manhattan and Long Island. <br><br>When you sign up, you will get a Member ID number. Use your Member ID in your neighborhood to receive discounts, promotions and exclusive access to private events from our network of professionals, stores and restaurants. <br><br>It's that simple.
 		                </p>
 						</div>
-		           <div id="membership-card">
-					<%= image_tag("membership-card.jpg", :alt => "membership card") %>
-				   </div>
+		           			<%= link_to new_user_registration_path do %>
+							<button class="pure-button button-choose">Join Now</button>
+							<% end %>
 		 			</div>
 		     </div>
 		
         <div class="pure-u-1-2">
             <div class="pricing-table pricing-table-free">
                 <div class="pricing-table-header">
-                    <h2>Personal Membership</h2>
+                    <h2>Membership is 100%</h2>
 
                     <span class="pricing-table-price">
-                       $0<span>PER MONTH</span>
+                       FREE<span>You will receive discounts to: </span>
                     </span>
                 </div>
 
                 <ul class="pricing-table-list">
-					<li>Local Discounts</li>
-					<li>Special Promotions</li>
-                    <li>Raffles</li>
-                    <li>Giveaways</li>
-                    <li>Events</li>
+					<li>Major Brands</li>
+					<li>Restaurants</li>
+                    <li>Professional Services</li>
+                    <li>Special Events</li>
+                    <li>And more!</li>
                   
                 </ul>
 
                 
-				<%= link_to new_user_registration_path do %>
-				<button class="pure-button button-choose">Join Now</button>
-				<% end %>
+			
             </div>
         </div>
 
