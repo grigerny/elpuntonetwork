@@ -19,6 +19,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   gem 'purecss-rails'
+  gem 'rails_12factor'
 end
 
 gem 'jquery-rails'

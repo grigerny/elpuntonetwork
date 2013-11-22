@@ -98,7 +98,7 @@ p {
  * Choose a different color based on the type of pricing table.
  */
 .pricing-table-free .pricing-table-header {
-    background: #519251;
+    background: #2C94D2;
 }
 
 .pricing-table-biz .pricing-table-header {
@@ -186,6 +186,13 @@ p {
     font-weight: 500;
 }
 
+.information-head-p{
+	text-align: left;
+}
+
+.membership-card{
+	float:left;
+}
 .footer {
     background: black;
     color: #888;
