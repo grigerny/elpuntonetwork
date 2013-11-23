@@ -21,6 +21,14 @@ p {
     line-height: 1.6em;
 }
 
+li.brand-css{
+	text-decoration:none !important;
+}
+
+.brand-css:hover{
+	text-decoration:none !important;
+	background:none !important;
+}
 
 /*
  * -- Layout Styles --

@@ -10,11 +10,13 @@
    <p class="notice"><%= notice %></p>
 	
 	<div class="pure-menu pure-menu-open pure-menu-horizontal">
-	    <a href="#" class="pure-menu-heading">El Punto Network</a>
+	    <li class="pure-menu-heading"><%= link_to root_path, :class=> "brand-css" do %>
+										<%= "El Punto Network" %>
+										<% end %></li>
 	
 		  <ul>
 		        <li class="pure-menu-selected"><%= link_to "Home", root_path %></li>
-		        <li><a href="#">Contact us</a></li>
+		        <li class="pure-menu-selected"><%= link_to "Contact us", home_contactus_path %></li>
 		    </ul>
 		</div>
 		
