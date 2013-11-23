@@ -11,5 +11,15 @@ class User < ActiveRecord::Base
   validates_presence_of :firstname, :lastname, :zipcode
   validates_format_of :zipcode, :with => /^\d{5}(-\d{4})?$/, :message => "should be valid"
   
+  before_create :generate_token
+
+  protected
+
+  def generate_token
+    begin
+      token = "epnc-" + SecureRandom.hex(3)
+    end while User.where(:token => token).exists?
+    self.token = token
+  end
 
 end
