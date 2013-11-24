@@ -4,10 +4,73 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-	<h1>Hi <%= @user.firstname %>!</h1>
-    <h2>Welcome to El Punto Network!</h2>
+	
+	<style>
+	.wrapper{
+		font-family:'Helvetica';
+		background:#F7F7F7;
+		padding:20px;
+	}
+	
+	.emailbody{
+		color:#5A636D;
+		background:white;
+		border:1px dotted #BFC0C0;
+		border-radius:5px;
+	}
+	
+	.bar{
+		background:#BFC0C0;
+		height:1px;
+		width:50%;
+	}
+	
+	.membership-number-css{
+		color:#008FF3;
+	}
+	
+	.bar2{
+		background:#BFC0C0;
+		height:1px;
+		width:50%;
+	}
+	</style>
+	
+	
+<div class="wrapper">	
+	
+	<center>
+	<div class="topbar">
+	</div>		
+	
+	<div class="emailbody">
+	<h1>Hi<%= @user.firstname %>!</h1>
+    <h2>Welcome to El Punto Network</h2>
+	
+	<div class="bar">
+	</div>	
+
     <p>
-      You have successfully signed up. Your Membership # is <%= @user.token %>
+    Your Membership # is <b> <div class="membership-number-css"><%= @user.token.upcase %></b></div>
     </p>
+	
+	<div class="bar2">
+	</div>
+	
+	<P>
+	If you received this email in error or would like to cancel your membership please email us at info@elpuntonetwork.com	
+	</P>	
+
+	</div>
+	
+	<div class="bottombar">
+	</div>
+	</center>
+<br>
+	
+	<a href="http://www.iubenda.com/privacy-policy/422133" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "http://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+	
+
+</div>
   </body>
 </html>

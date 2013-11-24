@@ -1,24 +1,11 @@
 <div class="banner">
     <h1 class="banner-head">
-		El Punto Network.
+		El Punto Network
     </h1>
 </div>
 
 <div class="l-content">
     <div class="pricing-tables pure-g-r">
-		<div class="pure-u-1-2">
-		            <div class="l-box">
-						<div class="information-head-p">
-							  <h3 class="information-head">Come in, We're Open!</h3>
-		                <p>
-		                    Now serving Queens, Manhattan and Long Island. <br><br>When you sign up, you will get a Member ID. Use your Member ID in your neighborhood to receive discounts, promotions and exclusive access to private events from our network of professionals, stores and restaurants. <br><br>It's that simple.
-		                </p>
-						</div>
-		           			<%= link_to new_user_registration_path do %>
-							<button class="pure-button button-choose">Join Now</button>
-							<% end %>
-		 			</div>
-		     </div>
 		
         <div class="pure-u-1-2">
             <div class="pricing-table pricing-table-free">
@@ -44,14 +31,37 @@
             </div>
         </div>
 
+		<div class="pure-u-1-2">
+		            <div class="l-box">
+						<div class="information-head-p">
+							  <h3 class="information-head">Come in, We're Open!</h3>
+		                <p>
+		                    Now serving Queens, Manhattan and Long Island. <br><br>When you sign up, you will get a Member ID. Use your Member ID in your neighborhood to receive discounts, promotions and exclusive access to private events from our network of professionals, stores and restaurants. <br><br>It's that simple.
+		                </p>
+						</div>
+		           			<%= link_to new_user_registration_path do %>
+							<button class="pure-button button-choose">Join Now</button>
+							<% end %>
+		 			</div>
+		     </div>
+		
     </div> <!-- end pricing-tables -->
 </div> <!-- end l-content -->
 
 <div class="footer">
     <p class="l-box">
-        <a href="#">Partners</a> Header image courtesy of <a href='http://unsplash.com/'>Unsplash</a>.  
+        Header image courtesy of <a href='http://unsplash.com/'>Unsplash</a>.  
 <% if user_signed_in? %>
 <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 <% end %>
     </p>
+</div>
+
+	<div class="copyright">
+	El Punto Media Corp. Copyright 2013
+	</div>
+
+<div class="privacy-policy">
+	
+	<a href="http://www.iubenda.com/privacy-policy/422133" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "http://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 </div>

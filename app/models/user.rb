@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
 
   def generate_token
     begin
-      token = "epnc-" + SecureRandom.hex(3)
+      token = "c" + SecureRandom.hex(3)
     end while User.where(:token => token).exists?
     self.token = token
   end

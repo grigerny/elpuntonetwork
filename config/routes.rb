@@ -7,7 +7,7 @@ Elpuntonetwork::Application.routes.draw do
   
   get "home/complete"
   
-   get "home/contactus"
+  get "home/contactus"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
