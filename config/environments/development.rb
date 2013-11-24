@@ -41,8 +41,8 @@ Elpuntonetwork::Application.configure do
    config.action_mailer.smtp_settings = {
        :address              => 'smtp.gmail.com',
        :port                 => 587,
-       :domain               => 'gmail.com',
-       :user_name            => 'elpuntonetwork@gmail.com',
+       :domain               => 'elpuntonetwork.com',
+       :user_name            => 'info@elpuntonetwork.com',
        :password             => 'Concepto74',
        :authentication       => 'login',
        :enable_starttls_auto => true
