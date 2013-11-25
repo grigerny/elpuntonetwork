@@ -1,4 +1,11 @@
 Elpuntonetwork::Application.routes.draw do
+  resources :listings
+
+
+  resources :categories
+  
+  resources :directories
+
   devise_for :users, :controllers => { :registrations => "registrations"}
   
   resources :users
