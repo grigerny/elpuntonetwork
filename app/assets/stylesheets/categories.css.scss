@@ -1,3 +1,45 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.category-list{
+	padding:40px;
+	height:1000px;
+	margin-top:-40px;
+}
+
+.category-list-show{
+	padding:40px;
+	margin-top:-40px;
+}
+
+.category-each{
+	float:left;
+	font-family:'Helvetica';
+	font-size:24px;
+	font-weight:400;
+	text-align:center;
+	padding:10px;
+	margin:10px;
+	-moz-box-shadow: 0 0 2px #4185F4;
+	-webkit-box-shadow: 0 0 2px #4185F4;
+	box-shadow: 0 0 2px #4185F4;
+	background-color:#F7F7F7;
+}
+
+.category-each:hover{
+	-moz-box-shadow: inset 0 0 5px #888;
+	-webkit-box-shadow: inset 0 0 5px#888;
+	box-shadow: inner 0 0 5px #888;
+}
+
+.category-each-button:hover{
+	text-decoration:none !important;
+	color:white;
+	background-color:none !important;
+}
+
+.category-each-button{
+	color:#666666 !important;
+	text-decoration:none !important;
+	background-color:transparent !important;
+}

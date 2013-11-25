@@ -4,7 +4,6 @@ Elpuntonetwork::Application.routes.draw do
        resources :listings
      end
      
-
   devise_for :users, :controllers => { :registrations => "registrations"}
   
   resources :users

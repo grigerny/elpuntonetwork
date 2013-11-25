@@ -13,6 +13,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @categories = Category.all
     @category = Category.find(params[:id])
 
     respond_to do |format|
@@ -44,8 +45,8 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to @category, notice: 'Category was successfully created.' }
-        format.json { render json: @category, status: :created, location: @category }
+        format.html { redirect_to categories_path, notice: 'Category was successfully created.' }
+        format.json { render json: categories_path, status: :created, location: @category }
       else
         format.html { render action: "new" }
         format.json { render json: @category.errors, status: :unprocessable_entity }

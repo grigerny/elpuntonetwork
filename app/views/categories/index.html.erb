@@ -1,21 +1,42 @@
-<h1>Listing categories</h1>
+<div class="banner">
+    <h1 class="banner-head">
+		Directory
+    </h1>
+</div>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @categories.each do |category| %>
-  <tr>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<div class="row-fluid">
+<div class="span12">
+	
 
-<br />
+
+<div class="row-fluid">
+<div class="span12">
+
+	<div class="category-list">
+		<% @categories.sort { |a,b| a.name <=> b.name }.each do |category| %>
+	
+		<div class="category-each">
+		<%= link_to category,:class => "category-each-button" do %><br>
+		<%= category.name %>
+		</div>
+		<% end %>
+		<% end %>
+		
+	</div>
+
+</div>
+
+<div class="span6">
+
+Testing
+
+</div>
+
+
+</div>
+
+</div>
+</div>
 
 <%= link_to 'New Category', new_category_path %>
