@@ -8,7 +8,7 @@
  */
 body {
     color: #526066;
-    font-family: 'helvetica';
+    font-family: 'Helvetica';
 }
 
 h2, h3 {
@@ -206,20 +206,21 @@ li.brand-css{
     font-size:16px;
 }
 
+
 .information-head {
+	font-family:'Helvetica';
     color: black;
     font-weight: 500;
     font-size:19px;
 }
 
 .information-head-p{
+	font-family:'Helvetica';
 	text-align: left;
 	font-size:16px;
 }
 
-.membership-card{
-	float:left;
-}
+
 .footer {
     background: black;
     color: #888;
