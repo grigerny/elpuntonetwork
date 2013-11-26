@@ -3,8 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .category-list{
 	padding:40px;
-	height:1000px;
-	margin-top:-40px;
+	background-color:#242A39;
 }
 
 .category-list-show{
@@ -16,33 +15,41 @@
 	font-family:'Helvetica';
 	font-size:24px;
 	font-weight:400;
-	text-align:center;
-	padding:10px;
-	margin:10px;
-	-moz-box-shadow: 0 0 2px #4185F4;
-	-webkit-box-shadow: 0 0 2px #4185F4;
-	box-shadow: 0 0 2px #4185F4;
-	background-color:#F7F7F7;
 }
 
 .category-each:hover{
-	-moz-box-shadow: inset 0 0 5px #888;
-	-webkit-box-shadow: inset 0 0 5px#888;
-	box-shadow: inner 0 0 5px #888;
-}
-
-.category-each-button:hover{
-	text-decoration:none !important;
-	color:white;
-	background-color:none !important;
+	font-color:#208DD6;
 }
 
 .category-each-button{
-	color:#666666 !important;
+	font-size:16px;
+	color:white !important;
 	text-decoration:none !important;
 	background-color:transparent !important;
 }
 
+.category-each-button:hover{
+	text-decoration:none !important;
+	color:#2C94D2 !important;
+	background-color:none !important;
+}
+
+
 .image-css{
 	width:50%;
+}
+
+.listing-list-show{
+	border-right:1px solid #ECECEC;
+	border-bottom:1px solid #ECECEC;
+	border-left:1px solid #ECECEC;
+	padding:20px;
+	
+}
+
+.listing-list-show:hover{
+	border-right:1px solid #ECECEC;
+	border-bottom:1px solid #ECECEC;
+	background:#EEEEEE;
+	border-left:5px solid #03A3C6;
 }
