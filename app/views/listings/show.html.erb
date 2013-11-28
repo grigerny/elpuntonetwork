@@ -30,22 +30,22 @@
 <div class="row-fluid">
 <div class="span4">
 			
-			<% @category.listings.each do |listing| %>
+			
 			<div class="listing-list-show">
 				<div id="listing-name-css">
-				<%= link_to listing.first_name + " " + listing.last_name, category_listing_path(@category,listing) %><br>
+				<%= @listing.first_name  %><br>
 				</div>
 				<div id="listing-company-css">
-				<%= listing.company %><br>
+				<%= @listing.company %><br>
 				</div>
-				<%= listing.phone %><br>
-				<%= listing.website %>
+				<%= @listing.phone %><br>
+				<%= @listing.website %>
 		
 				<div class="image-css">
-					<%= image_tag listing.img_url %>
+					<%= image_tag @listing.img_url %>
 				</div>
 			</div>
-				<% end %>
+		
 			
 </div>
 
@@ -67,10 +67,8 @@
 </div>
 
 
-<%= link_to 'New Category', new_category_path %>
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to 'New Category', new_listing_path %>
+<%= link_to 'Edit', edit_listing_path %> |
+<%= link_to 'Back', listings_path %>
 
 
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'Back', categories_path %>
