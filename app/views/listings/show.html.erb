@@ -1,5 +1,76 @@
 <p id="notice"><%= notice %></p>
 
 
+<div class="row-fluid">
+<div class="span12">
+	
+
+
+<div class="row-fluid">
+
+<div class="span2">
+
+<div class="category-list">
+			<% @categories.sort { |a,b| a.name <=> b.name }.each do |category| %>
+
+			<div class="category-each">
+			<%= link_to category,:class => "category-each-button" do %><br>
+			<%= category.name %>
+			</div>
+			<% end %>
+			<% end %>
+
+</div> 
+
+</div>
+
+
+
+		
+<div class="row-fluid">
+<div class="span4">
+			
+			<% @category.listings.each do |listing| %>
+			<div class="listing-list-show">
+				<div id="listing-name-css">
+				<%= link_to listing.first_name + " " + listing.last_name, category_listing_path(@category,listing) %><br>
+				</div>
+				<div id="listing-company-css">
+				<%= listing.company %><br>
+				</div>
+				<%= listing.phone %><br>
+				<%= listing.website %>
+		
+				<div class="image-css">
+					<%= image_tag listing.img_url %>
+				</div>
+			</div>
+				<% end %>
+			
+</div>
+
+
+	
+<div class="row-fluid">
+<div class="span6">
+
+	<h3 class="information-head-show"> Participating Businesses </h3>
+	 	<p>
+	        This is a list of some of the companies we work with. <br><br>Select from the categories on the left to see some of our partners. 
+	    </p>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+<%= link_to 'New Category', new_category_path %>
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
+
+
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'Back', listings_path %>
+<%= link_to 'Back', categories_path %>

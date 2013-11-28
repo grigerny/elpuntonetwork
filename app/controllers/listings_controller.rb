@@ -13,6 +13,7 @@ class ListingsController < ApplicationController
   # GET /listings/1
   # GET /listings/1.json
   def show
+    @categories = Category.all
     @listing = Listing.find(params[:id])
 
     respond_to do |format|

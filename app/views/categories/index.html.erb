@@ -4,16 +4,17 @@
 <div class="span12">
 	
 
-
 <div class="row-fluid">
-<div class="span2">
+<div class="span12">
 
 	<div class="category-list">
 		<% @categories.sort { |a,b| a.name <=> b.name }.each do |category| %>
-	
+		
+		<div class="span3">
 		<div class="category-each">
-		<%= link_to category,:class => "category-each-button" do %><br>
-		<%= category.name %>
+		<%= link_to category,:class => "category-each-button" do %>
+		<%= category.name.upcase %>
+		</div>
 		</div>
 		<% end %>
 		<% end %>
@@ -21,21 +22,103 @@
 	</div>
 
 </div>
+</div>
 
+<div class="row-fluid">
+	<div class="span12">
+	<div class="wrapper-box">
+		<div class="row-fluid">
+			<div class="span12">
+				<center><h1>MEMBERSHIP INSIDER:</h1></center>
+			</div>
+		</div>
+		<div class="wrapper-box-subheading">
+		<div class="row-fluid">
+			<div class="span12">
+				<center><h2>DEALS OF THE MONTH</h2></center>
+			</div>
+		</div>
+		</div>
+	</div>	
+	</div>
+</div>
 
-<div class="span10">
+<div class="row-fluid">
+	<div class="span12">
+		<div class="black-box">
+			<div class="span3 offset2">
+				<div class="white-box">
+					<div class="discount">
+						40% OFF
+					</div>
+				</div>
+			</div>		
+				<div class="span5">
+				<div class="designer-glasses">
+					<%= image_tag("sunglass.png")%>
+				</div>
+				</div>
+			</div>
+		</div>
+		</div>
+</div>	
 
-<h3 class="information-head"> Participating Businesses </h3>
- <p>
-        This is a list of some of the companies we work with. <br><br>Select from the categories on the left to see some of our partners. 
-    </p>
+<div class="row-fluid">
+<div class="span12">
+	<div class="span4">
+		<div class="divider-bar">
+		</div>
+	</div>
+	<div class="span4">
+		<div class="divider-bar">
+		</div>
+	</div>
+	<div class="span4">
+		<div class="divider-bar">
+		</div>
+	</div>
+</div>
+</div>	
 
+<div class="row-fluid">
+<div class="span12">
+	<div class="span4">
+	<div class="box-left">
+		<div class="chips-salsa-top">
+			Chips & Salsa NYC
+		</div>	
+		<div class="chips-salsa">
+			<%= image_tag("CHIPS-BACK.jpg")%>
+		</div>	
+		
+	</div>	
+	</div>	
+	
+	<div class="span4">
+			<div class="free-tax">
+			DO TAXES FOR FREE
+			</div>
+	<div class="box-middle">
+		<div class="box-middle-image">
+			<%= image_tag("taxes.jpg")%>
+		</div>
+	</div>		
+	</div>
+	
+		
+		<div class="span4">
+		<div class="box-right">
+				<center><h2>New Members</h2></center>
+			<div class="box-middle-line">	
+		</div>
+		</div>
+		</div>
+	
+</div>
 </div>
 
 
-</div>
 
 </div>
 </div>
 
-<%= link_to 'New Category', new_category_path %>

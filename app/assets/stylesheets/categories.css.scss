@@ -2,8 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .category-list{
-	padding:40px;
-	background-color:#242A39;
+	margin-bottom:20px;
 }
 
 .category-list-show{
@@ -12,9 +11,12 @@
 }
 
 .category-each{
+	letter-spacing: 0.25em;
+	background:#2C94D2;
 	font-family:'Helvetica';
-	font-size:24px;
 	font-weight:400;
+	padding:10px;
+	text-align:center;
 }
 
 .category-each:hover{
@@ -22,15 +24,15 @@
 }
 
 .category-each-button{
+	color:#96C9E8!important;
 	font-size:16px;
-	color:white !important;
 	text-decoration:none !important;
 	background-color:transparent !important;
 }
 
 .category-each-button:hover{
 	text-decoration:none !important;
-	color:#2C94D2 !important;
+	color:#95D3FD !important;
 	background-color:none !important;
 }
 
@@ -52,4 +54,81 @@
 	border-bottom:1px solid #ECECEC;
 	background:#EEEEEE;
 	border-left:5px solid #03A3C6;
+}
+
+.wrapper-box{
+	background-color:#D34F9F;
+	height:140px;
+	color:white;
+}
+.wrapper-box-subheading{
+	color:#EEC269;
+}
+
+.black-box{
+	background-color:black;
+	color:white;
+	height:100px;
+}
+
+.white-box{
+	padding:10px;
+}
+
+.discount{
+	color:white;
+	font-size:38px;
+	padding:30px;
+	font-weight:900;
+	border: 3px dashed #ccc;	
+}
+
+.designer-glasses{
+	position:absolute;
+	color:silver;
+	margin-top:-100px;
+}
+
+.divider-bar{
+	background-color:#2C94D2;
+	height:3px;
+	margin-top:50px;
+}
+
+.box-left{
+	margin-top:20px;
+	background-color:#D34F9F;
+	border:5px dashed #D34F9F;
+}
+
+.chips-salsa-top{  
+	text-align:center;
+	color:white;
+	margin-top:20px;
+	font-size:18px;
+	font-weight:bold;
+	font-weight:800;
+	letter-spacing:10px;
+	line-height:30px;
+}
+
+.box-middle-line{
+	border:1px dashed black;
+}
+
+.box-middle{
+	background-color:rgba(0, 204, 234, 1.000);
+}
+.free-tax{
+	margin-top:26px;
+	bottom:0px;
+	text-align:center;
+	color:black;	
+	font-size:24px;
+	font-width:bold;
+	font-weight:800;
+}
+
+.box-middle-image{
+	border:5px dashed white;
 }

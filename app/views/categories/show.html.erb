@@ -4,34 +4,35 @@
 	
 
 
-<div class="row-fluid">
+	<div class="row-fluid">
+	<div class="span12">
 
-<div class="span2">
-
-<div class="category-list">
+		<div class="category-list">
 			<% @categories.sort { |a,b| a.name <=> b.name }.each do |category| %>
 
+			<div class="span3">
 			<div class="category-each">
-			<%= link_to category,:class => "category-each-button" do %><br>
-			<%= category.name %>
+			<%= link_to category,:class => "category-each-button" do %>
+			<%= category.name.upcase %>
+			</div>
 			</div>
 			<% end %>
 			<% end %>
 
-</div> 
+		</div>
 
-</div>
-
+	</div>
+	</div>
 
 
 		
 <div class="row-fluid">
-<div class="span4">
+<div class="span6">
 			
 			<% @category.listings.each do |listing| %>
 			<div class="listing-list-show">
 				<div id="listing-name-css">
-				<%= listing.first_name %> <%= listing.last_name %><br>
+				<%= link_to listing.first_name + " " + listing.last_name, category_listing_path(@category,listing) %><br>
 				</div>
 				<div id="listing-company-css">
 				<%= listing.company %><br>
@@ -50,12 +51,9 @@
 
 	
 <div class="row-fluid">
-<div class="span6">
+<div class="span4">
 
-	<h3 class="information-head-show"> Participating Businesses </h3>
-	 	<p>
-	        This is a list of some of the companies we work with. <br><br>Select from the categories on the left to see some of our partners. 
-	    </p>
+
 
 </div>
 
