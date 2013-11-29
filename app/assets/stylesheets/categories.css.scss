@@ -108,11 +108,11 @@
 .black-box{
 	background-color:black;
 	color:white;
-	height:100px;
+	height:140px;
 }
 
 .white-box{
-	padding:10px;
+	padding:20px;
 }
 
 .discount{
@@ -135,17 +135,14 @@
 	margin-top:50px;
 }
 
-.chips-salsa-top{  
-	text-align:center;
-	color:white;
-	margin-top:20px;
-	font-size:18px;
-	font-weight:bold;
-	font-weight:800;
-	letter-spacing:10px;
-	line-height:30px;
+.chips-salsa{  
+	float:left;
+	border-top:5px solid #2C94D2;
+	max-width:auto;
 }
 
-.box-middle-line{
-	border:1px dashed black;
+.box-middle-image{
+	float:left;
+	border-top:5px solid #2C94D2;
+	max-width:auto;
 }
