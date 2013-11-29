@@ -1,3 +1,4 @@
+<div class="row-fluid">
 <%= form_for(@listing) do |f| %>
   <% if @listing.errors.any? %>
     <div id="error_explanation">
@@ -11,19 +12,37 @@
     </div>
   <% end %>
 
+<div class="span4 offset4">
+
   <div class="actions">
+	<%= collection_select(:listing, :category_id, Category.all, :id, :name, { :prompt => true }) %><br>
 	First Name<br>
 	<%= f.text_field :first_name %><br>
 	Last Name<br>
 	<%= f.text_field :last_name %><br>
 	Company<br>
 	<%= f.text_field :company %><br>
+	Industry<br>
+	<%= f.text_field :industry %><br>
 	Phone<br>
 	<%= f.text_field :phone %><br>
+	Address 1 <br>
+	<%= f.text_field :address1 %><br>
+	Address 2 <br>
+	<%= f.text_field :address2 %><br>
+	City <br>
+	<%= f.text_field :city %><br>
+	State <br>
+	<%= f.text_field :state %><br>
+	Zip <br>
+	<%= f.text_field :zip_code %><br>
 	Discount<br>
 	<%= f.text_area :discount %><br>
-	Category ID<br>
-	<%= f.text_field :category_id %><br>
+
+
     <%= f.submit %>
   </div>
+
+</div>
 <% end %>
+</div>

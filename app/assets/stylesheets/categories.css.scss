@@ -42,19 +42,15 @@
 }
 
 .listing-list-show{
-	border-right:1px solid #ECECEC;
-	border-bottom:1px solid #ECECEC;
-	border-left:1px solid #ECECEC;
 	padding:20px;
-	background:#EBEBEB;
+	border-left:3px solid #FAFAFA;
+	border-right:3px solid #FAFAFA;
+	border-bottom:3px solid #FAFAFA;
 	
 }
 
 .listing-list-show:hover{
-	border-right:5px solid #485D7F;
-	border-bottom:1px solid #ECECEC;
-	background:#EEEEEE;
-	border-left:5px solid #36455A;
+	background:ghostwhite;
 }
 
 .wrapper-box{
@@ -126,7 +122,7 @@
 .designer-glasses{
 	position:absolute;
 	color:silver;
-	margin-top:-100px;
+	margin-top:-20px;
 }
 
 .divider-bar{
