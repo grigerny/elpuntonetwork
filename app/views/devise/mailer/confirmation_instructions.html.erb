@@ -37,12 +37,7 @@
 	</style>
 	
 	
-	+<p>Welcome <%= @resource.email %>!</p>
-	 +
-	 +<p>You can confirm your account email through the link below:</p>
-	 +
-	 +<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
-	
+
 	
 <div class="wrapper">	
 	
@@ -60,6 +55,12 @@
     <p>
     Your Membership # is <b> <div class="membership-number-css"><%= @user.token.upcase %></b></div>
     </p>
+
+	<p>
+	But before you can login, you need to confirm your email account using the link below:
+	</p>
+	
+	<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
 	
 	<div class="bar2">
 	</div>
