@@ -64,7 +64,7 @@ class ListingsController < ApplicationController
 
     respond_to do |format|
       if @listing.update_attributes(params[:listing])
-        format.html { redirect_to @listing, notice: 'Listing was successfully updated.' }
+        format.html { redirect_to categories_path, notice: 'Listing was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
