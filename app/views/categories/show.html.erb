@@ -4,7 +4,7 @@
 	
 
 
-	<div class="row-fluid">
+<div class="row-fluid no-space">
 	<div class="span12">
 
 		<div class="category-list">
@@ -25,14 +25,35 @@
 	</div>
 
 
+<div class="row-fluid no-space">
+	
+		<div class="span3">
+			<div class="box-1-show-left">
+				</div>
+		</div>
 		
-<div class="row-fluid">
+		<div class="span6">
+			<div class="box-1-show">
+			</div>	
+		</div>
+		
+		<div class="span3">
+			<div class="box-1-show-left">
+				</div>
+		</div>		
+</div>
+		
+<div class="row-fluid no-space">
+<div class="span3">	
+	LEFT
+</div>	
+	
 <div class="span6">
 			
 			<% @category.listings.each do |listing| %>
 			<div class="listing-list-show">
 				<div id="listing-name-css">
-				<%= link_to listing.first_name + " " + listing.last_name, category_listing_path(@category,listing) %><br>
+				<%= listing.first_name %> <%= listing.last_name %><br>
 				</div>
 				<div id="listing-company-css">
 				<%= listing.company %><br>
@@ -43,6 +64,10 @@
 			</div>
 				<% end %>
 			
+</div>
+<div class="span3">
+	RIGHT
+	</div>
 </div>
 
 

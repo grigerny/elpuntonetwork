@@ -3,11 +3,31 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #listing-name-css{
 	font-weight:600;
-	color:#999999;
+	color:#2C94D2;
 }
 
 #listing-company-css{
 	color:black;
 	font-weight:800;
 	font-size:18px;
+}
+
+.box-1-show{
+	height:60px;
+	background-color:rgba(45, 59, 78, 1.000);
+}
+
+.box-1-show-left{
+	height:60px;
+	background-color:rgba(54, 69, 90, 1.000);
+}
+.box-2-show{
+	margin-top:35px;
+	height:70px;
+}
+
+.box-2-show-text{
+	text-align:center;
+	padding:10px;
+	color:rgba(150, 201, 232, 1.000);
 }
