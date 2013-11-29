@@ -1,6 +1,5 @@
 
 <div class="row-fluid">
-	
 
 
 <div class="row-fluid no-space">
@@ -43,15 +42,15 @@
 </div>
 		
 <div class="row-fluid no-space">
-	
+		
 <div class="span3">	
 	LEFT
 </div>	
-	
+
 <div class="span6">
 	
 		<% @category.listings.sort { |a,b| a.company <=> b.company }.each do |listing| %>
-			<div class="listing-list-show">
+			<div id="listing-list-show">
 					
 					<div class="row-fluid">
 						
@@ -62,11 +61,11 @@
 								<%= listing.industry.upcase %>
 								</div>
 								<br><br>
+								<div id="listing-company-css">
+							<%= listing.company %><br>
+							</div>
 					<%= listing.first_name %> <%= listing.last_name %> 			
 					<br>
-					</div>
-						<div id="listing-company-css">
-					<%= listing.company %><br>
 					</div>
 						<%= listing.phone %><br>
 						<%= listing.website %>
@@ -74,14 +73,17 @@
 						</div>
 						
 						<div class="span6">
+							<div class="discount-wrapper">
 							<div class="discount-text">
 							<%= listing.discount %>
+							</div>
 							</div>
 						</div>
 							
 						</div>
 						
 			</div>
+		
 		
 		<% end %>
 						
@@ -99,6 +101,7 @@
 
 	
 </div>
+
 
 
 <%= link_to 'New Listing', new_listing_path %>|

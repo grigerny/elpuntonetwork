@@ -12,3 +12,10 @@
  *= require purecss
  *= require_tree .
  */
+div#for_screen_display {
+  display:block;
+}
+
+div#for_print_display {
+  display:none;
+}

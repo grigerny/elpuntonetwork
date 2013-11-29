@@ -2,28 +2,59 @@
 <html>
 <head>
   <title>El Punto Network</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media => "screen" %>
+  <%= stylesheet_link_tag "print", :media => "print" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>	
    <p class="notice"><%= notice %></p>
+
+	<div class="fluid-row">
+		<div class='span10'>
 	
-	<div class="pure-menu pure-menu-open pure-menu-horizontal">
+			<div class="pure-menu pure-menu-open pure-menu-horizontal">
 	    <li class="pure-menu-heading"><%= link_to root_path, :class=> "brand-css" do %>
 										<%= "El Punto Network" %>
 										<% end %></li>
-	
-		  <ul>
-		        <li class="pure-menu-selected"><%= link_to "Home", root_path %></li>
-				<li class="pure-menu-selected"><%= link_to "Dashboard", categories_path %></li>
-		        <li class="pure-menu-selected"><%= link_to "Contact us", home_contactus_path %></li>
-				
-		
-		    </ul>
+	</div>
 		</div>
 		
+		<div class="span2">
+		
+		<% if user_signed_in? %>
+		  <div class="login-button-wrapper">
+		  <strong><%= current_user.firstname %> <%= current_user.lastname %></strong>
+		  ID# <%= current_user.token.upcase %>
+		  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+		</div>
+		<% else %>
+		<div class="login-button-wrapper">
+		  <%= link_to new_user_session_path, :class => "login-button" do %>
+		  <%= "Login".upcase%>
+		  <% end %>
+		</div>
+		<% end %>
+		
+		</div>
+		
+	</div>	
+	
+	
+		
 <%= yield %>
+
+</div>
+</div>
+
+<div class="row-fluid">
+	
+	<div class="copyright">
+	El Punto Media Corp. Copyright 2013
+	</div>
+
+	<div class="privacy-policy">	
+	<a href="http://www.iubenda.com/privacy-policy/422133" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "http://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 
 </body>
 </html>

@@ -35,13 +35,28 @@
 .industry-badge-show{
 	float:left;
 	font-size:12px;
-	background:rgba(44, 148, 210, 1.000);
 	border-radius:10px;
 	padding:3px;
-	color:white;
+	color:rgba(170, 170, 172, 1.000);
+	letter-spacing:3px;
 
 }
 
 .discount-text{
-	font-style: italic;
+	padding:20px;
+	font-style: bold;
+	font-weight:800;
+	color:black;
+}
+
+.discount-wrapper{
+	height:100px;
+	background:white;
+	border:5px dashed rgba(211, 79, 159, 1.000);
+}
+
+.discount-wrapper:hover{
+	height:100px;
+	background:white;
+	border:5px dashed rgba(211, 79, 159, 1.000);
 }

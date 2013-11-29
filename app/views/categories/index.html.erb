@@ -43,6 +43,14 @@
 	</div>
 	
 	<div class="span2">
+		
+		<% if user_signed_in? %>
+		<div class="signup-background">
+			<div class="signup-box-signedin">
+				Hola <%= current_user.firstname %>!
+			</div>
+		</div>
+		<% else %>
 		<%= link_to new_user_registration_path do %>
 		<div class="signup-background">
 			<div class="signup-box">
@@ -52,6 +60,7 @@
 				</div>
 			</div>
 		</div>
+		<% end %>
 		<% end %>
 	</div>
 </div>
