@@ -49,7 +49,7 @@
 
 <div class="span6">
 	
-		<% @category.listings.sort { |a,b| a.company <=> b.company }.each do |listing| %>
+		<% @category.listings.sort { |a,b| a.industry <=> b.industry }.each do |listing| %>
 			<div id="listing-list-show">
 					
 					<div class="row-fluid">
