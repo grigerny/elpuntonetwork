@@ -66,7 +66,9 @@
 					
 							<div id="listing-name-css">
 								<div id="listing-company-css">
+							<%= link_to listing_path(listing), :class =>"listing-company-css" do %>		
 							<%= listing.company %><br>
+							<% end %>
 							</div>
 					<%= listing.first_name %> <%= listing.last_name %> 			
 					<br>

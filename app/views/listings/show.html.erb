@@ -1,74 +1,112 @@
-<p id="notice"><%= notice %></p>
-
-
-<div class="row-fluid">
-<div class="span12">
-	
 
 
 <div class="row-fluid">
 
-<div class="span2">
 
-<div class="category-list">
+<div class="row-fluid no-space">
+	<div class="span12">
+
+		<div class="category-list">
 			<% @categories.sort { |a,b| a.name <=> b.name }.each do |category| %>
 
+			<div class="span3">
 			<div class="category-each">
-			<%= link_to category,:class => "category-each-button" do %><br>
-			<%= category.name %>
+			<%= link_to category,:class => "category-each-button" do %>
+			<%= category.name.upcase %>
+			</div>
 			</div>
 			<% end %>
 			<% end %>
 
-</div> 
+		</div>
 
+	</div>
+	</div>
+
+
+<div class="row-fluid no-space">
+	
+		<div class="span3">
+			<div class="box-1-show-left">
+				</div>
+		</div>
+		
+		<div class="span6">
+			<div class="box-1-show">
+			</div>	
+		</div>
+		
+		<div class="span3">
+			<div class="box-1-show-left">
+				</div>
+		</div>		
+</div>
+		
+<div class="row-fluid no-space">
+		
+<div class="span3">	
+
+</div>	
+
+<div class="span6">
+
+
+	
+			<div id="listing-list-show">
+					
+					<div class="row-fluid">
+						
+						<div class="span6">
+					
+							<div id="listing-name-css">
+								<div id="listing-company-css">
+							<%= @listing.company %><br>
+							</div>
+					<%= @listing.first_name %> <%= @listing.last_name %> 			
+					<br>
+					</div>
+						<%= @listing.address1 %><br>
+						<%= @listing.address2 %><br>
+						<%= @listing.city %>, <%= @listing.state %> <%= @listing.zip_code%><br>
+						<%= number_to_phone(@listing.phone, area_code: true) %>
+						<br>
+						<%= link_to "Website", "#{@listing.website}"%><br>
+						<%= link_to 'Edit', edit_listing_path %> 
+						</div>
+						
+						<div class="span6">
+							<div class="discount-wrapper">
+							<div class="discount-text">
+							<%= @listing.discount %>
+							</div>
+							</div>
+						</div>
+							
+						</div>
+						
+			</div>
+		
+		
+
+				
+				
+			
 </div>
 
 
+<div class="span3">
 
-		
-<div class="row-fluid">
-<div class="span4">
-			
-			
-			<div class="listing-list-show">
-				<div id="listing-name-css">
-				<%= @listing.first_name  %><br>
-				</div>
-				<div id="listing-company-css">
-				<%= @listing.company %><br>
-				</div>
-				<%= @listing.phone %><br>
-				<%= @listing.website %>
-		
-				<div class="image-css">
-					<%= image_tag @listing.img_url %>
-				</div>
-			</div>
-		
-			
+	</div>
+	
 </div>
 
 
 	
-<div class="row-fluid">
-<div class="span6">
-
-	<h3 class="information-head-show"> Participating Businesses </h3>
-	 	<p>
-	        This is a list of some of the companies we work with. <br><br>Select from the categories on the left to see some of our partners. 
-	    </p>
-
 </div>
 
 
 
-</div>
-</div>
-
-
-<%= link_to 'New Category', new_listing_path %>
-<%= link_to 'Edit', edit_listing_path %> |
-<%= link_to 'Back', listings_path %>
+<%= link_to 'New Listing', new_listing_path %>|
+<%= link_to 'Back', categories_path %>
 
 
