@@ -48,8 +48,8 @@ class ListingsController < ApplicationController
 
     respond_to do |format|
       if @listing.save
-        format.html { redirect_to categories_path, notice: 'Listing was successfully created.' }
-        format.json { render json: categories_path, status: :created, location: @listing }
+        format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
+        format.json { render json: @listing, status: :created, location: @listing }
       else
         format.html { render action: "new" }
         format.json { render json: @listing.errors, status: :unprocessable_entity }
@@ -64,7 +64,7 @@ class ListingsController < ApplicationController
 
     respond_to do |format|
       if @listing.update_attributes(params[:listing])
-        format.html { redirect_to categories_path, notice: 'Listing was successfully updated.' }
+        format.html { redirect_to @listing, notice: 'Listing was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
