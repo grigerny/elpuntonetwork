@@ -48,8 +48,11 @@
 </div>	
 
 <div class="span6">
+
+	<% @grouped_listing.each do |category, listings| %>
+
 	
-		<% @category.listings.sort { |a,b| a.industry <=> b.industry }.each do |listing| %>
+		<% listings.each do |listing| %>
 			<div id="listing-list-show">
 					
 					<div class="row-fluid">
@@ -58,7 +61,7 @@
 					
 							<div id="listing-name-css">
 								<div class="industry-badge-show">
-								<%= listing.industry.upcase %>
+								<%= category.upcase %>
 								</div>
 								<br><br>
 								<div id="listing-company-css">
@@ -86,7 +89,7 @@
 		
 		
 		<% end %>
-						
+			<% end %>				
 				
 			
 </div>

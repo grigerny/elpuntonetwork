@@ -18,6 +18,7 @@ class CategoriesController < ApplicationController
   def show
     @categories = Category.all
     @category = Category.find(params[:id])
+    @grouped_listing = @category.listings.group_by &:industry
 
     respond_to do |format|
       format.html # show.html.erb
