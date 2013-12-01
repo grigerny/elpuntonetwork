@@ -95,14 +95,18 @@
 <div class="span12">
 	<div class="span4">
 		<div class="chips-salsa">
-			<%= image_tag("chips.jpg")%>
+			<%= link_to category_path(14) do %>
+			<%= image_tag("chips.jpg") %>
+			<% end %>
 		</div>	
 	</div>	
 	
 	<div class="span4">
 	<div class="box-middle">
 		<div class="box-middle-image">
+			<%= link_to category_path(13) do %>
 			<%= image_tag("taxes.jpg")%>
+			<% end %>
 		</div>
 	</div>		
 	</div>
