@@ -137,15 +137,20 @@
 }
 
 .white-box{
-	padding:20px;
+	margin-top:20px;
 }
 
 .discount{
 	color:white;
 	font-size:38px;
-	padding:30px;
+	padding:20px;
 	font-weight:900;
-	border: 3px dashed #ccc;	
+	border: 3px dashed #ccc;
+	text-align:center;	
+}
+
+.discount-css:hover{
+	text-decoration:none;
 }
 
 .discount-subheading{
