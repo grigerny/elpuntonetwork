@@ -4,12 +4,13 @@
 #listing-name-css{
 	font-weight:600;
 	color:#2C94D2;
+	font-size:14px;
 }
 
 #listing-company-css{
 	color:black;
 	font-weight:800;
-	font-size:18px;
+	font-size:16px;
 }
 
 .box-1-show{
@@ -34,7 +35,7 @@
 
 .industry-badge-show{
 	float:left;
-	font-size:12px;
+	font-size:18px;
 	border-radius:10px;
 	padding:3px;
 	color:rgba(170, 170, 172, 1.000);
@@ -47,17 +48,19 @@
 	padding:20px;
 	font-style: bold;
 	font-weight:800;
+	font-size:16px;
 	color:black;
+	letter-spacing:1px;
 }
 
 .discount-wrapper{
-	height:100px;
+	height:auto;
 	background:white;
-	border:5px dashed rgba(211, 79, 159, 1.000);
+	border:5px dashed red;
 }
 
 .discount-wrapper:hover{
-	height:100px;
+	height:auto;
 	background:white;
-	border:5px dashed rgba(211, 79, 159, 1.000);
+	border:5px dashed red;
 }
