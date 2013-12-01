@@ -1,49 +1,48 @@
 <div class="banner">
-    <h1 class="banner-head">
-		Amazing Deals inside!
-    </h1>
-</div>
+	<div class="row-fluid">
+	<div class="span4 offset4">
+	<div class="signin-form">
+	<h3>SIGN IN</h3>
+
+	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+	<div class="devise-error-messages">
+
+	<% @user.errors.each do |attr, msg| %>
+	  <%= "#{attr} #{msg}"  %> <br>
+	<% end %>
+
+	</div>
 
 
-<div class="row-fluid">
-<div class="span4 offset4">
-<div class="signup">
-<h2>Sign in</h2>
+	<form>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-<div class="devise-error-messages">
+	    <fieldset>
 
-<% @user.errors.each do |attr, msg| %>
-  <%= "#{attr} #{msg}"  %> <br>
-<% end %>
+				  <div><%= f.label :email %>
+				  <%= f.email_field :email, :placeholder => "Email" %></div>
 
-</div>
+				  <div><%= f.label :password %>
+				  <%= f.password_field :password, :placeholder => "Password" %></div>
+
+				<button type="submit" class="pure-button pure-button-primary">Submit</button><br><br>
+					<%= render "devise/shared/links" %>
+	    </fieldset>
+
+
+	<% end %>
+
+
+
+	</form>
+
+	</div>
+	</div>
+	</div>
 	
-		
-<form>
-
-    <fieldset>
-
-			  <div><%= f.label :email %>
-			  <%= f.email_field :email %></div>
-
-			  <div><%= f.label :password %>
-			  <%= f.password_field :password %></div>
-
-			<button type="submit" class="pure-button pure-button-primary">Submit</button><br>
-				<%= render "devise/shared/links" %>
-    </fieldset>
-
-
-<% end %>
-
-
-
-</form>
-
+  
 </div>
-</div>
-</div>
+
+
 
 	<div class="copyright">
 	El Punto Media Corp. Copyright 2013

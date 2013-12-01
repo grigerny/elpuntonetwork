@@ -15,7 +15,7 @@
 	
 			<div class="pure-menu pure-menu-open pure-menu-horizontal">
 	    <li class="pure-menu-heading"><%= link_to root_path, :class=> "brand-css" do %>
-										<%= "HOME" %>
+									 	<%= image_tag ('mainlogo.png') %>
 										<% end %></li>
 	</div>
 		</div>
@@ -24,14 +24,14 @@
 		
 		<% if user_signed_in? %>
 		  <div class="login-button-wrapper">
-		  <strong><%= current_user.firstname.capitalize %> <%= current_user.lastname.capitalize %></strong>
+		  <strong><%= current_user.firstname.capitalize %> <%= current_user.lastname.capitalize %></strong><br>
 		  ID# <%= current_user.token.upcase %>
 		  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 		</div>
 		<% else %>
 		<div class="login-button-wrapper">
 		  <%= link_to new_user_session_path, :class => "login-button" do %>
-		  <%= "Login".upcase%>
+		  <%= "Sign in".upcase%>
 		  <% end %>
 		</div>
 		<% end %>
