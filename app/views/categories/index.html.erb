@@ -25,29 +25,25 @@
 </div>
 
 <div class="row-fluid no-space">
-	<div class="span10">
 	<div class="wrapper-box">
-		
-		<div class="row-fluid">
-				<center><h1>MEMBERSHIP INSIDER:</h1></center>
-		</div>
-		
-
-		<div class="row-fluid">
-				<div class="wrapper-box-subheading">
-					<center><h2>DEALS OF THE MONTH</h2></center>
-				</div>
-		</div>
-		
+	
+	<div class="span2">
 	</div>	
-	</div>
+	
+	<div class="span8">	
+		<div class="logo-name">
+			EL PUNTO GUIA
+		</div>		
+	</div>	
+	
+
 	
 	<div class="span2">
 		
 		<% if user_signed_in? %>
 		<div class="signup-background">
 			<div class="signup-box-signedin">
-				Hola <%= current_user.firstname %>!
+				Hola <%= current_user.firstname.capitalize %>!
 			</div>
 		</div>
 		<% else %>
@@ -83,6 +79,7 @@
 			</div>
 		</div>
 		</div>
+	</div>	
 </div>	
 
 <div class="row-fluid">
@@ -107,14 +104,24 @@
 	</div>		
 	</div>
 	
-		<div class="span4">
+		<div class="span3">
 		<div class="box-right">
-								<center><h2>Coupons</h2></center>
-								<center><h2>Discounts</h2></center>
-								<center><h2>Sample Sales</h2></center>
-								<center><h2>Wholesale</h2></center>
-								<center><h2>FREE</h2></center>
-								
+							<%= link_to category_path(13), :class=> "box-right1" do %>
+							<%= "Professionals".upcase %>
+							<% end %>
+							
+							<%= link_to category_path(14), :class=> "box-right2" do %>
+							<%= "Restaurants".upcase %>
+							<% end %>
+							
+							<%= link_to category_path(15), :class=> "box-right3" do %>
+							<%= "Services".upcase %>
+							<% end %>
+							
+							<%= link_to category_path(16), :class=> "box-right4" do %>
+							<%= "Shopping".upcase %>
+							<% end %>
+							
 			<div class="box-middle-line">	
 		</div>
 		</div>

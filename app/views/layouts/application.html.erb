@@ -15,7 +15,7 @@
 	
 			<div class="pure-menu pure-menu-open pure-menu-horizontal">
 	    <li class="pure-menu-heading"><%= link_to root_path, :class=> "brand-css" do %>
-										<%= "El Punto Network" %>
+										<%= "HOME" %>
 										<% end %></li>
 	</div>
 		</div>
@@ -24,7 +24,7 @@
 		
 		<% if user_signed_in? %>
 		  <div class="login-button-wrapper">
-		  <strong><%= current_user.firstname %> <%= current_user.lastname %></strong>
+		  <strong><%= current_user.firstname.capitalize %> <%= current_user.lastname.capitalize %></strong>
 		  ID# <%= current_user.token.upcase %>
 		  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 		</div>

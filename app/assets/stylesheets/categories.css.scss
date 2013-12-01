@@ -54,16 +54,16 @@
 }
 
 .wrapper-box{
-	background-color:#D34F9F;
+	background-color:rgba(224, 73, 62, 1.000);
 	height:140px;
 	color:white;
 }
 .wrapper-box-subheading{
-	color:#EEC269;
+	color:white;
 }
 
 .signup-background{
-	background:#D34F9F;
+	background:rgba(224, 73, 62, 1.000);
 	height:140px;
 }
 .signup-box{
@@ -173,4 +173,79 @@
 	float:left;
 	border-top:5px solid #2C94D2;
 	max-width:auto;
+}
+
+.box-right1{
+	font-weight:800;
+	font-size:28px;
+	text-decoration:none;
+	color:rgba(81, 96, 102, 1.000);
+	letter-spacing: 4px;
+    line-height:60px;
+	border-radius:5px;
+	padding:5px;
+	
+}
+
+.box-right1:hover{
+	text-decoration:none;
+	color:rgba(44, 148, 210, 1.000);
+}
+
+.box-right2{
+	font-weight:800;
+	font-size:28px;
+	text-align:center;
+	text-decoration:none;
+	color:rgba(81, 96, 102, 1.000);
+	letter-spacing: 4px;
+    line-height:60px;
+	border-radius:5px;
+	padding:5px;
+}
+
+.box-right2:hover{
+	text-decoration:none;
+	color:rgba(44, 148, 210, 1.000);
+}
+
+.box-right3{
+	font-weight:800;
+	font-size:28px;
+	text-align:center;
+	text-decoration:none;
+	color:rgba(81, 96, 102, 1.000);
+	letter-spacing: 4px;
+    line-height:60px;
+	border-radius:5px;
+	padding:5px;
+	
+}
+
+.box-right3:hover{
+	text-decoration:none;
+	color:rgba(44, 148, 210, 1.000);
+}
+
+.box-right4{
+	font-weight:800;
+	font-size:28px;
+	text-align:center;
+	text-decoration:none;
+	color:rgba(81, 96, 102, 1.000);
+	letter-spacing: 4px;
+    line-height:60px;
+	border-radius:5px;
+	padding:5px;
+}
+
+.box-right4:hover{
+	text-decoration:none;
+	color:rgba(44, 148, 210, 1.000);
+}
+
+.logo-name{
+	margin-top:50px;
+	font-size:48px;
+	font-weight:800;
 }
