@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
   include Devise::Mailers::Helpers
-  default :from => 'info@elpuntonetwork.com'
+  default :from => 'El Punto Guia'
 
     def welcome_email(user)
       @user = user
