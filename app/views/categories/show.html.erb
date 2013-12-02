@@ -33,9 +33,8 @@
 		<div class="span6">
 			<div class="box-1-show">
 				<%= search_form_for @search do |f| %>
-				<div class="field">
-					<%= f.label :company_cont, "Name contains" %>
-					<%= f.text_field :company_or_industry_cont %>
+				<div class="search-bar">
+					<%= f.text_field :company_or_industry_cont, :class=> "search-css", :placeholder => "Search" %>
 				</div>
 				<div class="actions"<%= f.submit %> </div>	
 				<% end %>
