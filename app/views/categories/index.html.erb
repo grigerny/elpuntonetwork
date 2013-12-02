@@ -55,7 +55,7 @@
 	
 	<div class="span8">	
 		<div class="logo-name">
-			Member Deals & Discounts
+			Descuentas y Promociones
 		</div>		
 	</div>	
 	
@@ -71,9 +71,9 @@
 				<div class="white-box">
 					<%= link_to listing_path(22), :class => "discount-css" do %>
 					<div class="discount">
-						40% OFF
+						40% Descuento
 					<div class="discount-subheading">
-						All Designer Frames
+						En Todos Los Marcos De Disenadores
 					</div>
 					</div>
 					<% end %>	
@@ -118,20 +118,21 @@
 	
 		<div class="span3">
 		<div class="box-right">
+			
+							<%= link_to category_path(16), :class=> "box-right4" do %>
+							<%= "Compras".upcase %>
+							<% end %>
+							
 							<%= link_to category_path(13), :class=> "box-right1" do %>
-							<%= "Professionals".upcase %>
+							<%= "Profesionales".upcase %>
 							<% end %>
 							
 							<%= link_to category_path(14), :class=> "box-right2" do %>
-							<%= "Restaurants".upcase %>
+							<%= "Restaurantes".upcase %>
 							<% end %>
 							
 							<%= link_to category_path(15), :class=> "box-right3" do %>
-							<%= "Services".upcase %>
-							<% end %>
-							
-							<%= link_to category_path(16), :class=> "box-right4" do %>
-							<%= "Shopping".upcase %>
+							<%= "Servicios".upcase %>
 							<% end %>
 							
 			<div class="box-middle-line">	
