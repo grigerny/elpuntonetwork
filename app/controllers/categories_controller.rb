@@ -16,9 +16,12 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @search = Listing.search(params[:q])
+    @listing = @search.result
     @categories = Category.all
     @category = Category.find(params[:id])
     @grouped_listing = @category.listings.group_by &:industry
+   
 
     respond_to do |format|
       format.html # show.html.erb

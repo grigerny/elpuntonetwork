@@ -32,6 +32,13 @@
 		
 		<div class="span6">
 			<div class="box-1-show">
+				<%= search_form_for @search do |f| %>
+				<div class="field">
+					<%= f.label :company_cont, "Name contains" %>
+					<%= f.text_field :company_or_industry_cont %>
+				</div>
+				<div class="actions"<%= f.submit %> </div>	
+				<% end %>
 			</div>	
 		</div>
 		
@@ -74,10 +81,10 @@
 					<br>
 					</div>
 					
-					 <%= listing.address1 if listing.address1? %>
-						<%= listing.address2 if listing.address2? %><br>
-						<%= listing.city if listing.city? %> <%= listing.state if listing.state? %> 
-						<%= listing.zip_code if listing.zip_code? %><br>
+					 	<%= listing.address1 %><br>
+						<%= listing.address2 %><br>
+						<%= listing.city  %> <%= listing.state  %> 
+						<%= listing.zip_code %><br>
 						<%= number_to_phone(listing.phone, area_code: true) %>
 					
 					

@@ -49,8 +49,6 @@
 </div>	
 
 <div class="span6">
-
-
 	
 			<div id="listing-list-show">
 					
@@ -67,7 +65,8 @@
 					</div>
 						<%= @listing.address1 %><br>
 						<%= @listing.address2 %><br>
-						<%= @listing.city %>, <%= @listing.state %> <%= @listing.zip_code%><br>
+						<%= @listing.city %> <%= @listing.state %> <%= @listing.zip_code%>
+						<br>
 						<%= number_to_phone(@listing.phone, area_code: true) %>
 						<br>
 						<%= link_to "Website", "#{@listing.website}"%><br>

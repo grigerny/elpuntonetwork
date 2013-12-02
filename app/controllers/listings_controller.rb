@@ -5,7 +5,9 @@ class ListingsController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @listings = Listing.all
+    @categories = Category.all
+    @search = Listing.search(params[:q])
+    @listings = @search.result
 
     respond_to do |format|
       format.html # index.html.erb
