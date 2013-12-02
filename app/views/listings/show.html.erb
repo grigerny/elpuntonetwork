@@ -70,7 +70,7 @@
 						<%= number_to_phone(@listing.phone, area_code: true) %>
 						<br>
 						<%= link_to "Website", "#{@listing.website}"%><br>
-						<%= link_to 'Edit', edit_listing_path %> 
+						<%= link_to 'Edit', edit_listing_path %> <br>
 						</div>
 						
 						<div class="span6">
@@ -79,6 +79,7 @@
 							<%= @listing.discount %>
 							</div>
 							</div>
+							<a href="#" onclick="window.print();return false;">Print me</a> 
 						</div>
 							
 						</div>
