@@ -73,14 +73,19 @@
 					<%= listing.first_name %> <%= listing.last_name %> 			
 					<br>
 					</div>
-						<%= listing.address1 %><br>
-						<%= listing.address2 %><br>
-						<%= listing.city %>, <%= listing.state %> <%= listing.zip_code%><br>
+					
+					 <%= listing.address1 if listing.address1? %>
+						<%= listing.address2 if listing.address2? %><br>
+						<%= listing.city if listing.city? %> <%= listing.state if listing.state? %> 
+						<%= listing.zip_code if listing.zip_code? %><br>
 						<%= number_to_phone(listing.phone, area_code: true) %>
+					
+					
 						<br>
 						<%= link_to "Website", "#{listing.website}"%><br>
 						<%= link_to 'Edit', edit_listing_path(listing) %> 
 						</div>
+					
 						
 						<div class="span6">
 							<div class="discount-wrapper">
