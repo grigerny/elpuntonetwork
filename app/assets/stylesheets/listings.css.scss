@@ -50,17 +50,25 @@
 
 }
 
-.discount-text{
+.discount-text-spanish{
 	padding:20px;
 	font-style: bold;
 	font-weight:800;
-	font-size:16px;
+	font-size:14px;
+	color:black;
+	letter-spacing:1px;
+}
+
+.discount-text-english{
+	padding:20px;
+	font-weight:400;
+	font-size:14px;
 	color:black;
 	letter-spacing:1px;
 }
 
 .discount-wrapper{
-	height:auto;
+	min-height:auto !important;
 	background:white;
 	border:5px dashed red;
 }
