@@ -51,16 +51,18 @@
 }
 
 .wrapper-box{
-	background-color:rgba(224, 73, 62, 1.000);
-	height:140px;
+	background: transparent url('http://farm3.staticflickr.com/2227/1795769113_cf6268b8fd_b.jpg') 0 0 no-repeat fixed;
 	color:white;
+	background-size: cover;
+    height: 360px;
+    width: 100%;
+    display: table;
 }
 .wrapper-box-subheading{
 	color:white;
 }
 
 .signup-background{
-	background:rgba(224, 73, 62, 1.000);
 	height:140px;
 }
 .signup-box{
@@ -131,7 +133,7 @@
 
 
 .black-box{
-	background-color:black;
+	background:black;
 	color:white;
 	height:140px;
 }
@@ -143,7 +145,7 @@
 .discount{
 	color:white;
 	font-size:32px;
-	padding:20px;
+	padding:10px;
 	font-weight:900;
 	border: 3px dashed #ccc;
 	text-align:center;	
@@ -252,7 +254,12 @@
 }
 
 .logo-name{
-	margin-top:50px;
+	float:left;
+	margin-top:100px;
 	font-size:48px;
 	font-weight:800;
+	color:white;
+	padding:20px;
+	background:rgba(0, 0, 0, 0.500);
+	line-height:60px;
 }
