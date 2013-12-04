@@ -86,4 +86,21 @@
 	border:5px dashed red;
 }
 
+.discount-text-spanish{
+	padding:20px;
+	font-style: bold;
+	font-weight:800;
+	font-size:14px;
+	color:black;
+	letter-spacing:1px;
+}
+
+.discount-text-english{
+	padding:20px;
+	font-weight:400;
+	font-size:14px;
+	color:black;
+	letter-spacing:1px;
+}
+
 }

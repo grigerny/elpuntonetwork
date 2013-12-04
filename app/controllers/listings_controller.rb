@@ -20,6 +20,8 @@ class ListingsController < ApplicationController
   def show
     @categories = Category.all
     @listing = Listing.find(params[:id])
+    @search = Listing.search(params[:q])
+    @listings = @search.result
 
     respond_to do |format|
       format.html # show.html.erb
