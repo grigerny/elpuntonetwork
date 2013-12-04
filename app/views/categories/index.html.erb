@@ -27,33 +27,8 @@
 <div class="row-fluid no-space">
 	<div class="wrapper-box">
 		
-			<div class="span1">
-				</div>
 
-
-		<div class="span3">
-
-			<% if user_signed_in? %>
-			<div class="signup-background">
-				<div class="signup-box-signedin">
-					Hola <%= current_user.firstname.capitalize %>!
-				</div>
-			</div>
-			<% else %>
-			<%= link_to new_user_registration_path do %>
-			<div class="signup-background">
-				<div class="signup-box">
-					Sign up!
-					<div class="signup-box-bottomtext">
-					IT'S FREE
-					</div>
-				</div>
-			</div>
-			<% end %>
-			<% end %>
-		</div>
-
-		<div class="span8">	
+		<div class="span8 offset3">	
 			<div class="logo-name">
 				<center>
 				Descuentas y Promociones<br>

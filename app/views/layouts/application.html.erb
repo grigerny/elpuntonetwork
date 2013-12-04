@@ -24,7 +24,7 @@
 		
 		<% if user_signed_in? %>
 		  <div class="login-button-wrapper">
-		  <strong><%= current_user.firstname.capitalize %> <%= current_user.lastname.capitalize %></strong><br>
+		  <strong>Hola <%= current_user.firstname.capitalize %>!</strong><br>
 		  ID# <%= current_user.token.upcase %>
 		  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 		</div>
@@ -39,6 +39,8 @@
 		</div>
 		
 	</div>	
+	
+	
 	
 	
 		
