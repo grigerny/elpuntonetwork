@@ -13,12 +13,25 @@
 	<div class="fluid-row">
 		<div class='span10'>
 	
+		<% if @home_index %>
 			<div class="pure-menu pure-menu-open pure-menu-horizontal">
-	    <li class="pure-menu-heading"><%= link_to root_path, :class=> "brand-css" do %>
-									 	<%= image_tag ('mainlogo.png') %>
-										<% end %></li>
+	    <li class="pure-menu-heading">
+		<%= link_to root_path, :class=> "brand-css" do %>
+			<%= image_tag ('mainlogo.png') %>
+			<% end %>
+		</li>
+	
+	   <% else %>
+			<div class="pure-menu pure-menu-open pure-menu-horizontal">
+	    <li class="pure-menu-heading">
+		<%= link_to categories_path, :class=> "epnlogocss" do %>
+			<%= image_tag ('epnlogo.png') %>
+	  	<% end %>
+	</li>
+		<% end %>
 	</div>
 		</div>
+		
 		
 		<div class="span2">
 		
@@ -31,7 +44,7 @@
 		<% else %>
 		<div class="login-button-wrapper">
 		  <%= link_to new_user_session_path, :class => "login-button" do %>
-		  <%= "Sign in".upcase%>
+		  <%= "Member Sign in".upcase%>
 		  <% end %>
 		</div>
 		<% end %>

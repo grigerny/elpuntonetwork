@@ -1,73 +1,41 @@
 <div class="banner">
     <h1 class="banner-head">
-			Benefits.
-			Rewards.
-			Savings.
 	    </h1>
 </div>
 
-<div class="l-content">
-    <div class="pricing-tables pure-g-r">
-	
-			<div class="pure-u-1-2">
-			            <div class="l-box">
-							<div class="information-head-p">
-								  <h3 class="information-head">Come in, We're Open!</h3>
-			                <p>
-			                    Now serving Queens, Manhattan and Long Island. <br><br>When you sign up, we will email you a Member ID Number. Use your Member ID in your neighborhood to receive discounts, promotions and exclusive access to private events from our network of professionals, stores and restaurants. <br><br>It's that simple.
-			                </p>
-							</div>
-			           			<%= link_to new_user_registration_path do %>
-								<button class="pure-button button-choose">Join Now</button>
-								<% end %>
-			 			</div>
-			     </div>
-		
-      			 <div class="pure-u-1-2">
-				            <div class="pricing-table pricing-table-free">
-				                <div class="pricing-table-header">
-				                    <h2>Membership is 100%</h2>
+<div class="container">
+<div class="row-fluid">
 
-				                    <span class="pricing-table-price">
-				                       FREE<span>Receive discounts from: </span>
-				                    </span>
-				                </div>
+	<div class="span4">
+		<div class="elpuntocover">
+		<%= link_to "http://issuu.com/conceptomedia/docs/elpunto_guia_final_oct/3?e=6211238/5208205" do %>
+		<%= image_tag ("elpuntocover.jpg")%>
+		<% end %>
+		</div>
+		</div>
+		<div class="span4">
+			<div class="epnlogo">
+			<%= link_to categories_path do %>
+			<%= image_tag ("epnlogo.png")%>
+			<% end %>
+			</div>
+			</div>
+			<div class="span4">
+				<div class="epc">
+				<%= image_tag ("epc.jpg")%>
+				</div>
+				<div class="coming-soon">
+					Coming Soon!
+				</div>
+				</div>
+</div>
+</div>
 
-		
-
-                <ul class="pricing-table-list">
-					<li>Popular Restaurants</li>
-					<li>Major Retail Stores</li>
-					<li>Professional Services</li>
-                    <li>Entertainment Venues</li>
-                    <li>And more!</li>
-                  
-                </ul>
-
-                
-			
-            </div>
-        </div>
-
-	
-		
-    </div> <!-- end pricing-tables -->
-</div> <!-- end l-content -->
 
 <div class="footer">
     <p class="l-box">
-        Header image courtesy of <a href='http://unsplash.com/'>Unsplash</a>.  
-<% if user_signed_in? %>
-<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-<% end %>
+		<%= link_to new_user_registration_path do %>
+		<button class="pure-button button-choose">Join Now</button>
+		<% end %>
     </p>
-</div>
-
-	<div class="copyright">
-	El Punto Media Corp. Copyright 2013
-	</div>
-
-<div class="privacy-policy">
-	
-	<a href="http://www.iubenda.com/privacy-policy/422133" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "http://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 </div>
