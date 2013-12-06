@@ -35,6 +35,10 @@
 		
 		<div class="span2">
 		
+		<% unless @home_index %>	
+		<%= link_to "Back to Main Page", root_url %>
+		<% end %>
+		
 		<% if user_signed_in? %>
 		  <div class="login-button-wrapper">
 		  <strong>Hola <%= current_user.firstname.capitalize %>!</strong><br>
