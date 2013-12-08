@@ -76,7 +76,6 @@ li.brand-css{
     background-size: cover;
     height: 350px;
     width: 100%;
-    margin-bottom: 3em;
     display: table;
 }
 
@@ -200,12 +199,11 @@ li.brand-css{
  */
 .button-choose {
     border: 1px solid #ccc;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.800);
     color: #333;
-    border-radius: 2em;
     font-weight: bold;
     position: relative;
-    font-size:16px;
+    font-size:18px;
 }
 
 
@@ -286,5 +284,35 @@ li.brand-css{
 	padding:10px;
 	text-align:center;
 	color:rgba(249, 158, 30, 1.000);
+}
+
+.black-bar-home{
+	margin-top:10px;
+	background-color:black;
+	height:140px;
+}
+
+.slogan-css{
+	padding:70px;
+	text-align:center !important;
+}
+
+.slogan-css-link{
+	font-size:28px !important;
+	color:white;
+	text-decoration:none !important;		
+}
+
+.slogan-css-link:hover{
+	color:rgba(56, 130, 255, 1.000);
+}
+
+#notice {
+  font-family: "Helvetica";
+  padding:5px;
+  display:auto;
+  color: #454545;
+  background:#ECF7FE;
+  border: 1px solid #C6E1F2;
 }
 

@@ -12,7 +12,10 @@
 <script type='text/javascript' src='fullcalendar/gcal.js'></script>
 </head>
 <body>	
-   <p class="notice"><%= notice %></p>
+	
+	<% if flash[:notice] %>
+	<p id="notice"><%= notice %></p>
+	 <% end %>
 
 	<div class="fluid-row">
 		<div class='span10'>

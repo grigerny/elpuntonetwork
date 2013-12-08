@@ -1,7 +1,12 @@
 <div class="banner">
     <h1 class="banner-head">
-	    </h1>
+		<%= link_to new_user_registration_path do %>
+		<button class="pure-button button-choose">Join Now</button>
+		<% end %>
+    </h1>
 </div>
+
+
 
 <div class="container">
 <div class="row-fluid">
@@ -31,11 +36,12 @@
 </div>
 </div>
 
-
-<div class="footer">
-    <p class="l-box">
-		<%= link_to new_user_registration_path do %>
-		<button class="pure-button button-choose">Join Now</button>
-		<% end %>
-    </p>
+<div class="row-fluid">
+    		<div class="black-bar-home">
+			<div class="slogan-css">
+			<%= link_to calendars_index_path, :class => "slogan-css-link" do %>
+			Calendario de Eventos
+			<% end %> 
+			</div>
+			</div>
 </div>

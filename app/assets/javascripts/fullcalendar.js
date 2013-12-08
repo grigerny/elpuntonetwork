@@ -24,6 +24,7 @@ var defaults = {
 		left: 'title',
 		center: '',
 		right: 'today prev,next'
+		 
 	},
 	weekends: true,
 	weekNumbers: false,
