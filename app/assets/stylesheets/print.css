@@ -103,4 +103,9 @@
 	letter-spacing:1px;
 }
 
+.epnlogocss {
+	width:20% !important;
+	display: none !important;
+}
+
 }
