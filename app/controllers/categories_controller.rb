@@ -6,6 +6,8 @@ class CategoriesController < ApplicationController
   
   def index
     @categories = Category.all
+     @search = Listing.search(params[:q])
+      @listing = @search.result
 
     respond_to do |format|
       format.html # index.html.erb
