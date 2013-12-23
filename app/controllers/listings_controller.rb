@@ -7,6 +7,10 @@ class ListingsController < ApplicationController
     @categories = Category.all
     @search = Listing.search(params[:q])
     @listings = @search.result
+    
+     if params[:search].present?
+         @listings = Listing.near(params[:search], 15, :order => :distance)
+       end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -21,6 +25,10 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
     @search = Listing.search(params[:q])
     @listings = @search.result
+    
+    if params[:search].present?
+         @listings = Listing.near(params[:search], 15, :order => :distance)
+       end
 
     respond_to do |format|
       format.html # show.html.erb
