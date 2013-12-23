@@ -90,9 +90,7 @@
 					
 						<br>
 						<%= link_to "Website", "#{listing.website}"%><br>
-							<% if current_user.email == "gary.riger@rocklo.com" %>
 							<%= link_to 'Edit', edit_listing_path(listing) %> 
-							<% end %>
 						</div>
 					
 						
@@ -129,7 +127,5 @@
 	
 </div>
 
-
-<% if current_user.email == "gary.riger@rocklo.com" %>
 <%= link_to 'New Listing', new_listing_path %>
-<% end %>
+

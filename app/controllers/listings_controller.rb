@@ -2,7 +2,6 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   
-  before_filter :authenticate_user!
   
   def index
     @categories = Category.all

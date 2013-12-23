@@ -2,7 +2,6 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   
-  before_filter :authenticate_user!, except: [:index]
   
   def index
     @categories = Category.all

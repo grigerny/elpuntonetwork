@@ -13,6 +13,8 @@ Elpuntonetwork::Application.routes.draw do
   
   get "home/contactus"
   
+  get "home/underconstruction"
+  
   get "calendars/index"
 
   # The priority is based upon order of creation:
