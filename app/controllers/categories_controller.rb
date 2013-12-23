@@ -7,6 +7,16 @@ class CategoriesController < ApplicationController
     @categories = Category.all
      @search = Listing.search(params[:q])
       @listing = @search.result
+      @listings = Listing.all
+      @hash = Gmaps4rails.build_markers(@listings) do |listing, marker|
+        marker.lat listing.latitude
+        marker.lng listing.longitude
+        marker.picture({
+               "url" => "http://google.com/mapfiles/kml/paddle/red-circle.png",
+               "width" =>  60,
+               "height" => 60})
+      end
+      
 
     respond_to do |format|
       format.html # index.html.erb

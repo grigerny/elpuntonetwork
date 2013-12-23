@@ -19,3 +19,4 @@ div#for_screen_display {
 div#for_print_display {
   display:none;
 }
+.gmnoprint img { max-width: none; }

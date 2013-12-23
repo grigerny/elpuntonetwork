@@ -1,22 +1,37 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.category-list{
-	margin-bottom:20px;
-}
 
+.category-list{
+	height:80px;
+	background: rgb(255,244,164); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,244,164,1) 0%, rgba(255,244,164,1) 14%, rgba(245,163,2,1) 86%, rgba(245,163,2,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,244,164,1)), color-stop(14%,rgba(255,244,164,1)), color-stop(86%,rgba(245,163,2,1)), color-stop(100%,rgba(245,163,2,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,244,164,1) 0%,rgba(255,244,164,1) 14%,rgba(245,163,2,1) 86%,rgba(245,163,2,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,244,164,1) 0%,rgba(255,244,164,1) 14%,rgba(245,163,2,1) 86%,rgba(245,163,2,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,244,164,1) 0%,rgba(255,244,164,1) 14%,rgba(245,163,2,1) 86%,rgba(245,163,2,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,244,164,1) 0%,rgba(255,244,164,1) 14%,rgba(245,163,2,1) 86%,rgba(245,163,2,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff4a4', endColorstr='#f5a302',GradientType=0 ); /* IE6-9 */
+
+
+	-webkit-box-shadow: 0 8px 6px -6px black;
+       -moz-box-shadow: 0 8px 6px -6px black;
+            box-shadow: 0 8px 6px -6px black;
+}
 .category-list-show{
 	padding:40px;
 	margin-top:-40px;
+	
 }
 
 .category-each{
 	letter-spacing: 0.25em;
-	background:#2C94D2;
+	height:80px;
+	background:#191919;
 	font-family:'Helvetica';
 	font-weight:400;
-	padding:10px;
 	text-align:center;
+	
 }
 
 .category-each:hover{
@@ -24,16 +39,20 @@
 }
 
 .category-each-button{
-	color:#96C9E8!important;
+	position:absolute;
+	margin-top:30px !important;
+	color:white!important;
 	font-size:16px;
 	text-decoration:none !important;
-	background-color:transparent !important;
+	
+
 }
 
 .category-each-button:hover{
 	text-decoration:none !important;
 	color:#95D3FD !important;
 	background-color:none !important;
+	
 }
 
 
@@ -57,6 +76,9 @@
     height: 360px;
     width: 100%;
     display: table;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
 }
 .wrapper-box-subheading{
 	color:white;
@@ -133,8 +155,20 @@
 
 
 .black-box{
-	background:black;
-	color:white;
+	margin-top:1px;
+	background: rgb(235,235,235); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(235,235,235,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(235,235,235,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(235,235,235,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(235,235,235,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(235,235,235,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(235,235,235,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebeb', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+    -webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+	color:black;
 	height:140px;
 }
 
@@ -279,4 +313,38 @@
 
 .epnlogocss:hover{
 	background:transparent !important;
+}
+
+.industry-box-wrapper{
+	-moz-box-shadow: 0px 0px 6px #7d7d7d;
+	-webkit-box-shadow: 0px 0px 6px #7d7d7d;
+	box-shadow: 0px 0px 6px #7d7d7d;
+}
+.industry-box-top{
+	margin-top:60px;
+}
+
+.industry-box-middle{
+	padding-top:10px;
+	text-align:center;
+	height:35px;
+	background:#F8C445;
+	border:1px solid #D0D0D0;
+	font-size:28px;
+}
+
+.industry-box-bottom{
+	height:100%;
+	background:#FFFFFF;	
+}
+
+.category-listing{
+	padding:20px;
+}
+
+.category-listing-link{
+	font-size:18px;
+	font-family: "Helvetica";
+	text-decoration:none !important;
+	color:#516066;
 }
