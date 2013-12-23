@@ -9,7 +9,7 @@ class ListingsController < ApplicationController
     @listings = @search.result
     
      if params[:search].present?
-         @listings = Listing.near(params[:search], 15, :order => :distance)
+         @listings = Listing.near(params[:search], 8, :order => :distance)
        end
 
     respond_to do |format|
@@ -27,7 +27,7 @@ class ListingsController < ApplicationController
     @listings = @search.result
     
     if params[:search].present?
-         @listings = Listing.near(params[:search], 15, :order => :distance)
+         @listings = Listing.near(params[:search], 8, :order => :distance)
        end
 
     respond_to do |format|
