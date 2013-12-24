@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131224193009) do
+ActiveRecord::Schema.define(:version => 20131224194835) do
+
+  create_table "areas", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "categories", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -46,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20131224193009) do
     t.float    "longitude"
     t.string   "location"
     t.integer  "city_id"
+    t.integer  "area_id"
   end
 
   create_table "users", :force => true do |t|

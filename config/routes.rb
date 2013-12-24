@@ -1,5 +1,8 @@
 Elpuntonetwork::Application.routes.draw do
 
+  resources :areas
+
+
   resources :cities, :path => "city"
      resources :categories, :path => "home"
        resources :listings, :path => "listing"
