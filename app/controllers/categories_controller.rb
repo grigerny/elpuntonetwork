@@ -4,8 +4,8 @@ class CategoriesController < ApplicationController
   
   
   def index
-    @categories = Category.all
-     @search = Listing.search(params[:q])
+      @categories = Category.all
+      @search = Listing.search(params[:q])
       @listing = @search.result
       @listings = Listing.all
       @hash = Gmaps4rails.build_markers(@listings) do |listing, marker|

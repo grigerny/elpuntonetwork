@@ -80,8 +80,10 @@
 						Directorio
 					</div>
 					
-				<%= @client = GooglePlaces::Client.new("AIzaSyBgbjW-FwDqJVkHlJY8IdjC4HrUWsYaPF4") %>
-				<%= @client.spots(-33.8670522, 151.1957362) %>
+				
+					<%= @ip = request.ip %>
+					<%= @city = request.location.city %>
+					<%= @country = request.location.country %>
 					
 					<div class="industry-box-bottom">
 							<div class="row-fluid">
