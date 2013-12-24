@@ -1,6 +1,7 @@
 Elpuntonetwork::Application.routes.draw do
 
-     resources :categories, :path => "elpuntonetwork"
+  resources :cities, :path => "city"
+     resources :categories, :path => "home"
        resources :listings, :path => "listing"
      
   devise_for :users

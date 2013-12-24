@@ -15,7 +15,10 @@
 				
 							<%= search_form_for @search do |f| %>
 							<div class="search-bar">
-								<%= f.text_field :company_or_industry_or_first_name_or_last_name_cont, :class=> "search-css", :placeholder => "Search" %>
+								<%= f.text_field :company_or_industry_or_first_name_or_last_name_or_zip_code_cont, :class=> "search-css", :placeholder => "Search" %>	
+								
+								
+								
 							</div>
 							<div class="actions"<%= f.submit %> </div>	
 							<% end %>
@@ -81,7 +84,7 @@
 					</div>
 					
 				
-					<%= @ip %>
+					<%= @ip  %>
 					<%= @ip_city %>
 					<%= @ip_country %>
 					

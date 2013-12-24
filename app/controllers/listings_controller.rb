@@ -5,11 +5,11 @@ class ListingsController < ApplicationController
   
   def index
     @categories = Category.all
-    @search = Listing.search(params[:q])
+    @search = Listing.search(params[:q])      
     @listings = @search.result
     
      if params[:search].present?
-         @listings = Listing.near(params[:search], 8, :order => :distance)
+         @listings = Listing.near(params[:search], 15, :order => :distance)
        end
 
     respond_to do |format|
@@ -27,7 +27,7 @@ class ListingsController < ApplicationController
     @listings = @search.result
     
     if params[:search].present?
-         @listings = Listing.near(params[:search], 8, :order => :distance)
+         @listings = Listing.near(params[:search], 15, :order => :distance)
        end
 
     respond_to do |format|
