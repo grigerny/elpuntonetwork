@@ -4,8 +4,14 @@ class CategoriesController < ApplicationController
   
   
   def index
+      @ip = request.ip
+   	  @ip_city = request.location.city 
+   	  @ip_country = request.location.country
+   	  
+   	  @search = Listing.near(@ip_city, 5).search(params[:q])
+		  
       @categories = Category.all
-      @search = Listing.search(params[:q])
+     
       @listing = @search.result
       @listings = Listing.all
       @hash = Gmaps4rails.build_markers(@listings) do |listing, marker|
@@ -99,4 +105,7 @@ class CategoriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+
+
 end
