@@ -80,7 +80,7 @@
 						<% end %>  
 						<%= listing.zip_code %><br>
 						<% if !listing.phone.blank? -%>
-						<%= number_to_phone(listing.phone, area_code: true) %>
+						<%= number_to_phone(listing.phone, area_code: true) %><br>
 						<% end %>  
 						<% if !listing.website.blank? -%>
 						<%= link_to "Website", "#{listing.website}"%><br>

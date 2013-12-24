@@ -36,58 +36,64 @@
 
 	</div>
 	</div>
-<div class="row-fluid no-space">
+<div class="row-fluid">
 		
-<div class="span3">	
-
-</div>	
-
-<div class="span6">
+<div class="span12">
 	<div class="row-fluid">
 	<div class="industry-badge-show">
-	<%= @listing.industry.upcase %>
+	<%= @listing.industry %>
 	</div>
 	</div>
 	
-			<div id="listing-list-show">
+	<div id="listing-list-show">
 					
 					<div class="row-fluid">
 						
-						<div class="span6">
+
 					
-							<div id="listing-name-css">
+						<div id="listing-name-css">
 								<div id="listing-company-css">
 							<%= @listing.company %><br>
-							</div>
+							    </div>
 					<%= @listing.first_name %> <%= @listing.last_name %> 			
 					<br>
-					</div>
+					   </div>
+						<% if !@listing.address1.blank? -%>
 						<%= @listing.address1 %><br>
+						<% end %>
+						<% if !@listing.address2.blank? -%>
 						<%= @listing.address2 %><br>
-						<%= @listing.city %> <%= @listing.state %> <%= @listing.zip_code%>
-						<br>
-						<%= number_to_phone(@listing.phone, area_code: true) %>
-						<br>
+						<% end %>
+						<% if !@listing.city.blank? -%>
+						<%= @listing.city %>
+						<% end %> 
+						<% if !@listing.state.blank? -%>
+						<%= @listing.state %>
+						<% end %> 
+						<% if !@listing.zip_code.blank? -%>
+						<%= @listing.zip_code%><br>
+						<% end %> 
+						<% if !@listing.phone.blank? -%>
+						<%= number_to_phone(@listing.phone, area_code: true) %><br>
+						<% end %> 
 						<%= link_to "Website", "#{@listing.website}"%><br>
-						
-							<%= link_to 'Edit', edit_listing_path %> 
+						<%= link_to 'Edit', edit_listing_path %><br><br>
 					
-						</div>
+					</div>
 						
-						<div class="span6">
-							<div class="discount-wrapper">
-							<div class="discount-text-spanish">
-							<%= @listing.discount %>
+					<div class="row-fluid">	
+						<div class="span3">
+								<div class="discount-wrapper">
+								<div class="discount-text-spanish">
+								<%= @listing.discount %>
+								</div>
+								<div class="discount-text-english">
+								<%= @listing.discount_english %>
+								</div>
+								</div>
+								<a href="#" onclick="window.print();return false;">Print me</a> 
 							</div>
-							<div class="discount-text-english">
-							<%= @listing.discount_english %>
-							</div>
-							</div>
-							<a href="#" onclick="window.print();return false;">Print me</a> 
-						</div>
-							
-						</div>
-						
+					</div>		
 			</div>
 		
 		
@@ -98,9 +104,6 @@
 </div>
 
 
-<div class="span3">
-
-	</div>
 	
 </div>
 
@@ -110,6 +113,3 @@
 
 
 <%= link_to 'New Listing', new_listing_path %>
-
-
-
