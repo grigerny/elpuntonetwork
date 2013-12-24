@@ -43,6 +43,7 @@
 </div>	
 
 <div class="span6">
+	
 
 	
 	
@@ -50,7 +51,7 @@
 		
 			<div class="row-fluid">
 			<div class="industry-badge-show">
-			<%= listing.industry.upcase %>
+			<%= listing.industry %>
 			</div>
 			</div>
 			
@@ -58,7 +59,7 @@
 					
 					<div class="row-fluid">
 						
-						<div class="span6">
+						<div class="span12">
 					
 							<div id="listing-name-css">
 								<div id="listing-company-css">
@@ -66,33 +67,32 @@
 							<%= listing.company %><br>
 							<% end %>
 							</div>
-					<%= listing.first_name %> <%= listing.last_name %> 			
-					<br>
+					
 					</div>
-					
+						<% if !listing.address1.blank? -%>
 					 	<%= listing.address1 %><br>
+						<% end %>
+						<% if !listing.address2.blank? -%>
 						<%= listing.address2 %><br>
-						<%= listing.city  %> <%= listing.state  %> 
+						<% end %>
+						<% if !listing.city.blank? -%>
+						<%= listing.city  %>
+						<% end %> 
+						<% if !listing.state.blank? -%>
+						<%= listing.state  %><br>
+						<% end %>  
 						<%= listing.zip_code %><br>
-						<%= number_to_phone(listing.phone, area_code: true) %>
-					
-					
-						<br>
+						<% if !listing.phone.blank? -%>
+						<%= number_to_phone(listing.phone, area_code: true) %><br>
+						<% end %>  
+						<% if !listing.website.blank? -%>
 						<%= link_to "Website", "#{listing.website}"%><br>
-							<%= link_to 'Edit', edit_listing_path(listing) %> 
+						<% end %>  
+
 						</div>
 					
 						
-						<div class="span6">
-								<div class="discount-wrapper">
-								<div class="discount-text-spanish">
-								<%= listing.discount %>
-								</div>
-								<div class="discount-text-english">
-								<%= listing.discount_english %>
-								</div>
-								</div>
-						</div>
+					
 							
 						</div>
 						
