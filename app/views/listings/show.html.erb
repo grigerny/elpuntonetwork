@@ -34,31 +34,14 @@
 	
 	<div class="row-fluid no-space">	
 		<div class="css-overlap-wrapper">
-		<div class="span2">	
-				
-			<div id="category-list-listing-show">
-					<div class="row-fluid">
-						<div class="category-listing">
-						<% @categories.sort { |a,b| a.name <=> b.name }.each do |category| %>
-							<div class="span12">
-							<%= link_to category, :class => "category-listing-link" do %> 
-							<%= category.name  %>
-							<% end %>
-							</div>
-						<% end%>	
-
-					    </div>
-				    </div>	
-			</div>	
 		
-		</div>
-		
-		<div class="span6">	
+		<div class="container">
+		<div class="span12">	
 		<div id="listing-list-show">
 			
 				<div class="row-fluid no-space">
 					
-					<div class="span8">	
+					<div class="span9">	
 					<div id="listing-name-css">
 								<div id="listing-company-css">
 									
@@ -95,26 +78,51 @@
 					</div>
 						
 					
-					<div class="span4">
+					<div class="span3">
 							<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@listing.latitude},#{@listing.longitude}&zoom=12&size=150x150&markers=red|#{@listing.latitude},#{@listing.longitude}|&maptype=roadmap&sensor=true", :class=> "show-map" %>
 				   </div>
 				</div>
 		<hr>
-		
-		</div>	
+		<div class="row-fluid">
+			
+		</div>
+		<hr>
+		<div class="row-fluid">
+			<div class="span8 offset2">
+			<div id="disqus_thread"></div>
+		    <script type="text/javascript">
+		        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+		        var disqus_shortname = 'elpuntoguia'; // required: replace example with your forum shortname
+
+		        /* * * DON'T EDIT BELOW THIS LINE * * */
+		        (function() {
+		            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		        })();
+		    </script>
+		    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
+		 </div>
+		 </div>	
 		</div>		
+		</div>
+		
 		
 		<div class="span4">
 			<div class="right-side-listing-show">
 		
 			</div>	
 		</div>			
-		</div>
+	</div>
 
 	</div>
 		
 	
-		<a href="#" onclick="window.print();return false;">Print me</a>
+			</div>
+			
+			
+<a href="#" onclick="window.print();return false;">Print me</a><br>
 <%= link_to 'New Listing', new_area_listing_path %><br>
 <%= link_to 'Edit', edit_area_listing_path %><br>
 <%= link_to 'Destroy', [@listing.area, @listing], :confirm => 'Are you sure?', :method => :delete %>
