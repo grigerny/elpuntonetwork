@@ -7,7 +7,6 @@ class ListingsController < ApplicationController
     @categories = Category.all
     @search = Listing.search(params[:q])      
     @listings = @search.result
-    @category = Category.find(params[:area_id])
   
     
      if params[:search].present?
