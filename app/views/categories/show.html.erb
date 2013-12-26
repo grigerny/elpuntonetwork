@@ -66,7 +66,7 @@
 <div class="span4">
 	<div class="row-fluid">
 	<div class="category-show-headline">
-	<%= @category.name %> in New York
+	<%= @category.name %> in Nueva York
 	</div>
 	</div>
 	
@@ -111,7 +111,7 @@
 						<%= number_to_phone(listing.phone, area_code: true) %><br>
 						<% end %>  
 						<% if !listing.website.blank? -%>
-						<%= link_to "Website", "#{listing.website}"%><br>
+						<%= link_to listing.website.sub(/^https?\:\/\//, '').sub(/^www./,''), "#{listing.website}"%><br>
 						<% end %>  
 
 						</div>
