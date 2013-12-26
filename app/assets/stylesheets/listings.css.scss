@@ -48,9 +48,48 @@
 	text-decoration:none !important;
 }
 
+
+.industry-box-bottom{
+	margin-top:1px;
+	height:100%;
+	background:rgba(52, 60, 68, 1.000);	
+	border-right:1px solid rgba(205, 205, 205, 1.000);
+}
+
+
+#directory-list-show{
+		padding:10px;
+		background:rgba(252, 252, 252, 1.000);
+}
+
+.css-overlap-wrapper{
+	width:100%;
+	height: 500px;
+    position: relative;
+}
+
+#category-list-listing-show{
+	min-width:0%;
+	margin-top:1px;
+	height:100%;
+	background:rgba(52, 60, 68, 1.000);	
+	border-right:1px solid rgba(205, 205, 205, 1.000);
+	z-index:1;
+}
+
 #listing-list-show{
+	margin-top:1px;
 	padding:10px;
+	height:460px;
 	background:rgba(252, 252, 252, 1.000);
+	border-bottom:1px solid rgba(204, 204, 200, 1.000);
+	border-right:1px solid rgba(204, 204, 200, 1.000);
+	z-index:2;
+   
+}
+
+.right-side-listing-show{
+
 }
 
 .show-wrapper{
@@ -78,6 +117,12 @@
 	color:rgba(150, 201, 232, 1.000);
 }
 
+.show-map{
+	border:5px solid white;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
 
 
 .discount-text-spanish{

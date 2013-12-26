@@ -33,14 +33,10 @@
 
 	
 	<div class="row-fluid no-space">	
+		<div class="css-overlap-wrapper">
 		<div class="span2">	
-			<div class="industry-box-wrapper">
-			<div class="industry-box-top">
-			</div>	
-
-
-
-			<div class="industry-box-bottom">
+				
+			<div id="category-list-listing-show">
 					<div class="row-fluid">
 						<div class="category-listing">
 						<% @categories.sort { |a,b| a.name <=> b.name }.each do |category| %>
@@ -54,13 +50,15 @@
 					    </div>
 				    </div>	
 			</div>	
-			</div>
+		
 		</div>
 		
 		<div class="span6">	
 		<div id="listing-list-show">
-			<div class="row-fluid">
-						
+			
+				<div class="row-fluid no-space">
+					
+					<div class="span8">	
 					<div id="listing-name-css">
 								<div id="listing-company-css">
 									
@@ -93,33 +91,30 @@
 									</div> 
 								</div>
 					
-				     	</div>
+				    </div>
+					</div>
 						
-					<div class="row-fluid">	
-						<div class="span3">
-								<div class="discount-wrapper">
-								<div class="discount-text-spanish">
-								<%= @listing.discount %>
-								</div>
-								<div class="discount-text-english">
-								<%= @listing.discount_english %>
-								</div>
-								</div>
-								<a href="#" onclick="window.print();return false;">Print me</a> 
-							</div>
-					</div>		
-			</div>
+					
+					<div class="span4">
+							<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@listing.latitude},#{@listing.longitude}&zoom=12&size=150x150&markers=red|#{@listing.latitude},#{@listing.longitude}|&maptype=roadmap&sensor=true", :class=> "show-map" %>
+				   </div>
+				</div>
+		<hr>
+		
 		</div>	
-
 		</div>		
 		
 		<div class="span4">
-					<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@listing.latitude},#{@listing.longitude}&zoom=12&size=350x292&markers=red|#{@listing.latitude},#{@listing.longitude}|&maptype=roadmap&sensor=true" %>
+			<div class="right-side-listing-show">
+		
+			</div>	
 		</div>			
+		</div>
+
 	</div>
 		
-
+	
+		<a href="#" onclick="window.print();return false;">Print me</a>
 <%= link_to 'New Listing', new_area_listing_path %><br>
 <%= link_to 'Edit', edit_area_listing_path %><br>
 <%= link_to 'Destroy', [@listing.area, @listing], :confirm => 'Are you sure?', :method => :delete %>
-
