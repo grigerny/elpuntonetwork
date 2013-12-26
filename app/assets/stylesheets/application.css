@@ -20,3 +20,8 @@ div#for_print_display {
   display:none;
 }
 .gmnoprint img { max-width: none; }
+
+.hours-css{
+	width: 500px;
+	height: 100px;
+}

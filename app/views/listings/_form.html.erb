@@ -37,9 +37,11 @@
 	Website<br>
 	<%= f.text_field :website %><br>
 	Discount in Spanish<br>
-	<%= f.text_area :discount %><br>
+	<%= f.text_area :discount, :class => "hours-css" %><br>
 	Discount in English<br>
-	<%= f.text_area :discount_english %><br>
+	<%= f.text_area :discount_english, :class => "hours-css" %><br>
+	Hours of Operation:<br>
+	<%= f.text_area :hours, :class => "hours-css" %>
 
 
     <%= f.submit %>

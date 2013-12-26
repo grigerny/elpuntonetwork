@@ -82,11 +82,19 @@
 							<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@listing.latitude},#{@listing.longitude}&zoom=12&size=150x150&markers=red|#{@listing.latitude},#{@listing.longitude}|&maptype=roadmap&sensor=true", :class=> "show-map" %>
 				   </div>
 				</div>
+
+<%# Adding additional information about this listing %>
 		<hr>
 		<div class="row-fluid">
-			
+			<div class="span2">
+			<% if !@listing.hours.blank? -%>
+			<div class="listing-attribute-topic">Hours:</div> 
+			<div class="listing-attribute"><%= simple_format(@listing.hours) %></div>
+			<% end %>
+			</div>
 		</div>
 		<hr>
+<%# Start of comments section %>			
 		<div class="row-fluid">
 			<div class="span8 offset2">
 			<div id="disqus_thread"></div>
