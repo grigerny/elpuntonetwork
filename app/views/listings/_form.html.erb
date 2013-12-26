@@ -1,5 +1,5 @@
 <div class="row-fluid">
-<%= form_for(@listing) do |f| %>
+<%= form_for [@area, @listing] do |f| %>
   <% if @listing.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
@@ -16,18 +16,12 @@
 
   <div class="actions">
 	<%= collection_select(:listing, :category_id, Category.all, :id, :name, { :prompt => true }) %><br>
-	First Name<br>
-	<%= f.text_field :first_name %><br>
-	Last Name<br>
-	<%= f.text_field :last_name %><br>
+	<%= collection_select(:listing, :area_id, Area.all, :id, :name, { :prompt => true }) %><br>
+	
 	Company<br>
 	<%= f.text_field :company %><br>
 	Industry<br>
 	<%= f.text_field :industry %><br>
-	Phone<br>
-	<%= f.text_field :phone %><br>
-	Website<br>
-	<%= f.text_field :website %><br>
 	Address 1 <br>
 	<%= f.text_field :address1 %><br>
 	Address 2 <br>
@@ -38,6 +32,10 @@
 	<%= f.text_field :state %><br>
 	Zip <br>
 	<%= f.text_field :zip_code %><br>
+	Phone<br>
+	<%= f.text_field :phone %><br>
+	Website<br>
+	<%= f.text_field :website %><br>
 	Discount in Spanish<br>
 	<%= f.text_area :discount %><br>
 	Discount in English<br>

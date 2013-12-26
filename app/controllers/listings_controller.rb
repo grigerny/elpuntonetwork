@@ -7,6 +7,8 @@ class ListingsController < ApplicationController
     @categories = Category.all
     @search = Listing.search(params[:q])      
     @listings = @search.result
+    @category = Category.find(params[:area_id])
+  
     
      if params[:search].present?
          @listings = Listing.near(params[:search], 15, :order => :distance)
@@ -25,6 +27,7 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
     @search = Listing.search(params[:q])
     @listings = @search.result
+ 
     
     if params[:search].present?
          @listings = Listing.near(params[:search], 15, :order => :distance)
@@ -39,7 +42,8 @@ class ListingsController < ApplicationController
   # GET /listings/new
   # GET /listings/new.json
   def new
-    @listing = Listing.new
+    @area = Area.find(params[:area_id])
+    @listing = @area.listings.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -49,17 +53,20 @@ class ListingsController < ApplicationController
 
   # GET /listings/1/edit
   def edit
-    @listing = Listing.find(params[:id])
+    @area = Area.find(params[:area_id])
+    @listing = @area.listings.find(params[:id])
   end
 
   # POST /listings
   # POST /listings.json
   def create
-    @listing = Listing.new(params[:listing])
-
+    @area = Area.find(params[:area_id])
+    @listing = @area.listings.build(params[:listing])
+  
+      
     respond_to do |format|
       if @listing.save
-        format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
+        format.html { redirect_to([@listing.area, @listing], notice: 'Listing was successfully created.') }
         format.json { render json: @listing, status: :created, location: @listing }
       else
         format.html { render action: "new" }
@@ -71,11 +78,12 @@ class ListingsController < ApplicationController
   # PUT /listings/1
   # PUT /listings/1.json
   def update
-    @listing = Listing.find(params[:id])
+    @area = Area.find(params[:area_id])
+    @listing = @area.listings.find(params[:id])
 
     respond_to do |format|
       if @listing.update_attributes(params[:listing])
-        format.html { redirect_to @listing, notice: 'Listing was successfully updated.' }
+        format.html  { redirect_to([@listing.area, @listing], :notice => 'Comment was successfully updated.') }        
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -87,11 +95,12 @@ class ListingsController < ApplicationController
   # DELETE /listings/1
   # DELETE /listings/1.json
   def destroy
-    @listing = Listing.find(params[:id])
+    @area= Area.find(params[:area_id])
+    @listing = @area.listings.find(params[:id])
     @listing.destroy
 
     respond_to do |format|
-      format.html { redirect_to listings_url }
+      format.html { redirect_to area_listings_url }
       format.json { head :no_content }
     end
   end

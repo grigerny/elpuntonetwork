@@ -1,22 +1,62 @@
 // Place all the styles related to the listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.industry-badge-show{
+	padding-top:10px;
+	font-size:16px;
+	color:rgba(139, 139, 139, 1.000);
+	height:35px;
+	padding-left:10px;
+
+}
+
+.listing-show-headline{
+	padding-left:10px;
+	padding-top:10px;
+	font-size:24px;
+	color:rgba(5, 71, 151, 1.000);
+	height:35px;
+	font-weight:bold;
+}
+
+.listing-show-business-info{
+	padding:10px;
+	color:rgba(81, 96, 102, 1.000);
+	font-size:14px;
+	font-weight:400;
+}
+
 #listing-name-css{
 	font-weight:600;
 	color:#2C94D2;
-	font-size:14px;
+	font-size:12px;
+	
 }
 
 #listing-company-css{
 	color:black;
 	font-weight:800;
-	font-size:16px;
+	font-size:12px;
+
 }
 
 .listing-company-css{
-	color:black;
+	color:rgba(6, 71, 151, 1.000);
 	font-weight:800;
-	font-size:16px;
+	font-size:14px;
+	text-decoration:none !important;
+}
+
+#listing-list-show{
+	padding:10px;
+	background:rgba(252, 252, 252, 1.000);
+}
+
+.show-wrapper{
+	border-left:1px solid rgba(204, 204, 200, 1.000);
+	border-right:1px solid rgba(204, 204, 200, 1.000);
+	border-bottom:1px solid rgba(204, 204, 200, 1.000);
 }
 
 .box-1-show{
@@ -38,16 +78,7 @@
 	color:rgba(150, 201, 232, 1.000);
 }
 
-.industry-badge-show{
-	float:left;
-	font-size:16px;
-	border-radius:10px;
-	padding:10px;
-	color:#FF0200;
-	letter-spacing:3px;
-	font-weight:800;
 
-}
 
 .discount-text-spanish{
 	padding:20px;

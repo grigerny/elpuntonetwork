@@ -1,5 +1,172 @@
-<p id="notice"><%= notice %></p>
+<script src="//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" type="text/javascript"></script>
+<script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
+
+<div class="row-fluid">
+<div class="span12">
+	
+
+<div class="row-fluid no-space">
+<div class="span12">
+
+	<div class="category-list">
+		
+			<div class="span4 offset2">	
+			<div class="box-1-show">
+				
+							<%= search_form_for @search, url: area_listings_path(@area) do |f| %>
+							<div class="search-bar">
+								<%= f.text_field :company_or_industry_or_first_name_or_last_name_or_zip_code_cont, :class=> "search-css", :placeholder => "Search" %>	
+								
+								
+								
+							</div>
+							<div class="actions"<%= f.submit %> </div>	
+							<% end %>
+			</div>
+			</div>				
+
+			<div class="span4">	
+						<div class="box-1-show">
+								<%= search_form_for @search, url: area_listings_path(@area) do |f| %>
+								<div class="search-bar">
+									<%= text_field_tag :search, params[:search], :class=> "search-css", :placeholder => "Location" %>
+								</div>
+								<div class="actions"<%= f.submit %> </div>	
+								<% end %>
+							</div>				
+			</div>					
+		
+		
+	</div>
+
+</div>
+</div>
+
+<div class="row-fluid no-space">
+	
+	
+	<div class="span2">	
+		<div class="industry-box-wrapper">
+		<div class="industry-box-top">
+		</div>	
 
 
-<%= link_to 'Edit', edit_area_path(@area) %> |
-<%= link_to 'Back', areas_path %>
+		
+		<div class="industry-box-bottom">
+				<div class="row-fluid">
+					<div class="category-listing">
+					<% @categories.sort { |a,b| a.name <=> b.name }.each do |category| %>
+						<div class="span12">
+						<%= link_to category, :class => "category-listing-link" do %> 
+						<%= category.name  %>
+						<% end %>
+						</div>
+					<% end%>	
+						
+				    </div>
+			    </div>	
+		</div>	
+		</div>
+	</div>
+	
+	<div class="span10">
+	
+	<div style='width: 100%;'>
+	  <div id="map" style='width: 100%; height: 480px; margin-top:1px'></div>
+	</div>
+
+	<script>
+	
+	handler = Gmaps.build('Google');
+	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+	  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+	  handler.bounds.extendWith(markers);
+	  handler.fitMapToBounds();
+	});
+	</script>
+	
+	</div>
+	
+	
+</div>
+
+
+
+<div class="row-fluid">
+	<div class="span12">
+		<div class="black-box">
+			
+		
+			
+			<div class="row-fluid">
+			<div class="span12">
+				<div class="transition-index">
+					</div>
+				
+				
+			</div>	
+		    </div>
+			
+			
+		</div>
+	</div>	
+</div>	
+
+<div class="row-fluid">
+<div class="span12">
+
+</div>
+</div>	
+
+<div class="row-fluid">
+<div class="span12">
+	<div class="span4">
+		<div class="chips-salsa">
+			<%= link_to area_listing_path(24) do %>
+			<%= image_tag("chips.jpg") %>
+			<% end %>
+		</div>	
+	</div>	
+	
+	<div class="span4">
+	<div class="box-middle">
+		<div class="box-middle-image">
+			<%= link_to area_listing_path(10) do %>
+			<%= image_tag("taxes.jpg")%>
+			<% end %>
+		</div>
+	</div>		
+	</div>
+	
+		<div class="span3">
+		<div class="box-right">
+			
+							<%= link_to category_path(16), :class=> "box-right4" do %>
+							<%= "Compras".upcase %>
+							<% end %>
+							
+							<%= link_to category_path(13), :class=> "box-right1" do %>
+							<%= "Profesionales".upcase %>
+							<% end %>
+							
+							<%= link_to category_path(14), :class=> "box-right2" do %>
+							<%= "Restaurantes".upcase %>
+							<% end %>
+							
+							<%= link_to category_path(15), :class=> "box-right3" do %>
+							<%= "Servicios".upcase %>
+							<% end %>
+							
+			<div class="box-middle-line">	
+		</div>
+		</div>
+		</div>
+	
+</div>
+</div>
+
+
+
+</div>
+</div>
+

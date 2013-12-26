@@ -13,7 +13,7 @@
 			<div class="span4 offset2">	
 			<div class="box-1-show">
 				
-							<%= search_form_for @search do |f| %>
+							<%= search_form_for @search, url: area_listings_path(1) do |f| %>
 							<div class="search-bar">
 								<%= f.text_field :company_or_industry_or_first_name_or_last_name_or_zip_code_cont, :class=> "search-css", :placeholder => "Search" %>	
 								
@@ -27,7 +27,7 @@
 
 			<div class="span4">	
 						<div class="box-1-show">
-								<%= search_form_for @search do |f| %>
+								<%= search_form_for @search, url: area_listings_path(1) do |f| %>
 								<div class="search-bar">
 									<%= text_field_tag :search, params[:search], :class=> "search-css", :placeholder => "Location" %>
 								</div>
@@ -45,8 +45,34 @@
 <div class="row-fluid no-space">
 	
 	
+	<div class="span2">	
+		<div class="industry-box-wrapper">
+		<div class="industry-box-top">
+		</div>	
+
+
+		
+		<div class="industry-box-bottom">
+				<div class="row-fluid">
+					<div class="category-listing">
+					<% @categories.sort { |a,b| a.name <=> b.name }.each do |category| %>
+						<div class="span12">
+						<%= link_to category, :class => "category-listing-link" do %> 
+						<%= category.name  %>
+						<% end %>
+						</div>
+					<% end%>	
+						
+				    </div>
+			    </div>	
+		</div>	
+		</div>
+	</div>
+	
+	<div class="span10">
+	
 	<div style='width: 100%;'>
-	  <div id="map" style='width: 100%; height: 400px; margin-top:1px'></div>
+	  <div id="map" style='width: 100%; height: 480px; margin-top:1px'></div>
 	</div>
 
 	<script>
@@ -59,6 +85,8 @@
 	});
 	</script>
 	
+	</div>
+	
 	
 </div>
 
@@ -68,46 +96,14 @@
 	<div class="span12">
 		<div class="black-box">
 			
+		
 			
 			<div class="row-fluid">
 			<div class="span12">
-				<div class="span3">
-				</div>
+				<div class="transition-index">
+					</div>
 				
-				<div class="span6">	
-					<div class="industry-box-wrapper">
-					<div class="industry-box-top">
-					</div>	
-					
-					<div class="industry-box-middle">
-						Directorio
-					</div>
-					
 				
-					<%= @ip  %>
-					<%= @ip_city %>
-					<%= @ip_country %>
-					
-					<div class="industry-box-bottom">
-							<div class="row-fluid">
-								<div class="category-listing">
-								<% @categories.sort { |a,b| a.name <=> b.name }.each do |category| %>
-									<div class="span3">
-									<%= link_to category, :class => "category-listing-link" do %> 
-									<%= category.name  %>
-									<% end %>
-									</div>
-								<% end%>	
-									
-							</div>
-						</div>	
-					</div>	
-					</div>
-					
-				<div class="span3">	
-					</div>
-					
-				</div>
 			</div>	
 		    </div>
 			
@@ -126,7 +122,7 @@
 <div class="span12">
 	<div class="span4">
 		<div class="chips-salsa">
-			<%= link_to listing_path(24) do %>
+			<%= link_to area_listing_path(1,24) do %>
 			<%= image_tag("chips.jpg") %>
 			<% end %>
 		</div>	
@@ -135,7 +131,7 @@
 	<div class="span4">
 	<div class="box-middle">
 		<div class="box-middle-image">
-			<%= link_to listing_path(10) do %>
+			<%= link_to area_listing_path(1,10) do %>
 			<%= image_tag("taxes.jpg")%>
 			<% end %>
 		</div>

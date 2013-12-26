@@ -1,11 +1,10 @@
 Elpuntonetwork::Application.routes.draw do
 
-  resources :areas
+  resources :areas do 
+     resources :listings, :path => "listing"
+   end
 
-
-  resources :cities, :path => "city"
-     resources :categories, :path => "home"
-       resources :listings, :path => "listing"
+  resources :categories, :path => "directory"
      
   devise_for :users
   
@@ -70,7 +69,7 @@ Elpuntonetwork::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 
