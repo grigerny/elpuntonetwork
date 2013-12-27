@@ -88,7 +88,7 @@
 		<div class="row-fluid">
 			<div class="span2">
 			<% if !@listing.hours.blank? -%>
-			<div class="listing-attribute-topic">Hours:</div> 
+			<div class="listing-attribute-topic">Business Hours:</div> 
 			<div class="listing-attribute"><%= simple_format(@listing.hours) %></div>
 			<% end %>
 			</div>
@@ -131,6 +131,10 @@
 			
 			
 <a href="#" onclick="window.print();return false;">Print me</a><br>
+<% if current_user.try(:admin?) %>
 <%= link_to 'New Listing', new_area_listing_path %><br>
 <%= link_to 'Edit', edit_area_listing_path %><br>
 <%= link_to 'Destroy', [@listing.area, @listing], :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+
+
