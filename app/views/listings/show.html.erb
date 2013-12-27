@@ -35,13 +35,29 @@
 	<div class="row-fluid no-space">	
 		<div class="css-overlap-wrapper">
 		
+		
 		<div class="container">
 		<div class="span12">	
 		<div id="listing-list-show">
 			
+			
 				<div class="row-fluid no-space">
+					<% if @listing.reference.blank? %>
+					<div class="span0">
+						</div>
+						<% else %>
+							<div class="span2">
+								<% @client = GooglePlaces::Client.new("AIzaSyAKv_excTcghTEiiJ9br1J6977E7uDGu8k") %>
+								<% @client.spots("#{@listing.latitude}","#{@listing.longitude}", :name => "#{@listing.company}") %>
+								<% @spot = @client.spot("#{@listing.reference}") rescue nil%>
+								<% url = @spot.photos[0].fetch_url(800) rescue nil%>
+								<%= image_tag(url) rescue nil %>
+								</div>
+							<% end %>	
+						
+						
 					
-					<div class="span9">	
+					<div class="span4">	
 					<div id="listing-name-css">
 								<div id="listing-company-css">
 									
@@ -76,13 +92,19 @@
 					
 				    </div>
 					</div>
-						
 					
-					<div class="span3">
-							<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@listing.latitude},#{@listing.longitude}&zoom=12&size=150x150&markers=red|#{@listing.latitude},#{@listing.longitude}|&maptype=roadmap&sensor=true", :class=> "show-map" %>
+					
+					<% if @listing.reference.blank? %>
+					<div class="span8">
+							<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@listing.latitude},#{@listing.longitude}&zoom=12&size=180x180&markers=red|#{@listing.latitude},#{@listing.longitude}|&maptype=roadmap&sensor=true", :class=> "show-map" %>
+					</div>
+					<% else %>
+					<div class="span6">
+							<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@listing.latitude},#{@listing.longitude}&zoom=12&size=180x180&markers=red|#{@listing.latitude},#{@listing.longitude}|&maptype=roadmap&sensor=true", :class=> "show-map" %>
 				   </div>
+					<% end %>
 				</div>
-
+			
 <%# Adding additional information about this listing %>
 		<hr>
 		<div class="row-fluid">
@@ -96,7 +118,7 @@
 		<hr>
 <%# Start of comments section %>			
 		<div class="row-fluid">
-			<div class="span8 offset2">
+			<div class="span6">
 			<div id="disqus_thread"></div>
 		    <script type="text/javascript">
 		        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -129,7 +151,10 @@
 	
 			</div>
 			
+
+
 			
+			<br><br>
 <a href="#" onclick="window.print();return false;">Print me</a><br>
 <% if current_user.try(:admin?) %>
 <%= link_to 'New Listing', new_area_listing_path %><br>

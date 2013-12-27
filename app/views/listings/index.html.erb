@@ -69,12 +69,21 @@
 		
 		
 			<div id="listing-list-show">
-					
+	
 					<div class="row-fluid">
 						
 						<div class="span12">
-					
-							<div id="listing-name-css">
+								<% if !listing.reference.blank? %>
+								<% @client = GooglePlaces::Client.new("AIzaSyAKv_excTcghTEiiJ9br1J6977E7uDGu8k") %>
+								<% @client.spots("#{listing.latitude}","#{listing.longitude}", :name => "#{listing.company}") %>
+								<% @spot = @client.spot("#{listing.reference}") rescue nil%>
+								<% url = @spot.photos[0].fetch_url(800) rescue nil%>
+								<div class="photo">
+								<%= image_tag(url) rescue nil %>
+								</div>
+								<% end %>
+										
+							<div id="listing-name-css">	
 								<div id="listing-company-css">
 							<%= link_to area_listing_path(listing.area_id,listing), :class =>"listing-company-css" do %>		
 							<%= listing.company %><br>
