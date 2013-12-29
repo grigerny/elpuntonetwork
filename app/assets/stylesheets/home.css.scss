@@ -7,10 +7,6 @@
  * Most of these are inherited from Base, but I want to change a few.
  */
 
-.pre-nav{
-	background:rgba(255, 255, 255, 1.000);
-	height:30px;
-}
 .top-nav{
 	background-size: 100%;
 	background: url('dimension.png') fixed;
@@ -26,7 +22,11 @@ h2, h3 {
     text-transform: uppercase;
     font-weight: 600;
 }
-
+h4 {
+	color:red !important;
+	font-size:24px;
+	text-decoration:none !important;
+}
 p {
     line-height: 1.6em;
 }
@@ -324,5 +324,16 @@ li.brand-css{
   color: #454545;
   background:#ECF7FE;
   border: 1px solid #C6E1F2;
+}
+
+.marker{
+	margin-top:15px;
+}
+
+.marker-listing-company-css{
+	color:rgba(2, 2, 2, 1.000);
+	font-weight:800;
+	font-size:18px;
+	text-decoration:none !important;
 }
 

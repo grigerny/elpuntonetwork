@@ -10,10 +10,13 @@ class ListingsController < ApplicationController
       @hash = Gmaps4rails.build_markers(@listings) do |listing, marker|
         marker.lat listing.latitude
         marker.lng listing.longitude
+        location_link = view_context.link_to listing.company, area_listing_path(listing.area_id,listing)
         marker.picture({
                "url" => "http://i.imgur.com/DkGmkTs.png",
                "width" =>  60,
                "height" => 60})
+        marker.infowindow "<h4><u>#{location_link}</u></h4>"
+        marker.infowindow render_to_string(:partial => "/listings/marker", :locals => { :listing => listing})
       end
   
     

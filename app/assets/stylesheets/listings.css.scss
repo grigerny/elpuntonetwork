@@ -41,14 +41,14 @@
 #listing-company-css{
 	color:black;
 	font-weight:800;
-	font-size:12px;
+	font-size:16px;
 
 }
 
 .listing-company-css{
 	color:rgba(6, 71, 151, 1.000);
 	font-weight:800;
-	font-size:14px;
+	font-size:16px;
 	text-decoration:none !important;
 }
 
@@ -70,7 +70,7 @@
 	width:100%;
 	height: auto;
     position: relative;
-	background: rgba(252, 252, 252, 1.000);
+	background: url('dimension.png') fixed;
 }
 
 #category-list-listing-show{
