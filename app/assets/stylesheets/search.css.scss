@@ -1,5 +1,5 @@
-.location-search-css{
-  margin-left:-130px !important;
+.location-search-css{	
+  margin-top:20px;
   width:100%;
   border:none !important;
   font-family:"Helvetica";
@@ -14,6 +14,7 @@
 
 
 .search-css{
+  margin-top:20px;
   width:100%;
   border:none !important;
   font-family:"Helvetica";
@@ -23,14 +24,15 @@
   -moz-box-shadow: inset 0 0 5px #888 !important;
   -webkit-box-shadow: inset 0 0 5px#888 !important;
   box-shadow: inner 0 0 5px #888 !important;
-  border-top-left-radius:10px !important;
+  border-radius:20px !important;
+
 }
 
 .search-css:hover{
 }
 
 .search-bar{
-	padding:20px;
+ margin-bottom:-10px;
 }
 
 .search-bar:hover{

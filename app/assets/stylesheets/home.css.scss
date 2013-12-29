@@ -7,6 +7,10 @@
  * Most of these are inherited from Base, but I want to change a few.
  */
 
+.pre-nav{
+	background:rgba(255, 255, 255, 1.000);
+	height:30px;
+}
 .top-nav{
 	background-size: 100%;
 	background: url('dimension.png') fixed;

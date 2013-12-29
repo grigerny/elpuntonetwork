@@ -3,45 +3,16 @@
 
 <div class="row-fluid">
 <div class="span12">
-	
-
-
 
 <div class="row-fluid no-space">
 	
-	
-	<div class="span2">	
-		<div class="industry-box-wrapper">
-		<div class="industry-box-top">
-		</div>	
-
-
-		
-		<div class="industry-box-bottom">
-				<div class="row-fluid">
-					<div class="category-listing">
-					<% @categories.sort { |a,b| a.name <=> b.name }.each do |category| %>
-						<div class="span12">
-						<%= link_to category, :class => "category-listing-link" do %> 
-						<%= category.name  %>
-						<% end %>
-						</div>
-					<% end%>	
-						
-				    </div>
-			    </div>	
-		</div>	
-		</div>
-	</div>
-	
-	<div class="span10">
+	<div class="span12">
 	
 	<div style='width: 100%;'>
-	  <div id="map" style='width: 100%; height: 480px; margin-top:1px'></div>
+	  <div id="map" style='width: 100%; height: 480px'></div>
 	</div>
 
 	<script>
-	
 	handler = Gmaps.build('Google');
 	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 	  markers = handler.addMarkers(<%=raw @hash.to_json %>);
@@ -58,39 +29,48 @@
 <div class="row-fluid no-space">
 
 	<div class="category-list">
+		<div class="row-fluid no-space">
+			<div class="span6 offset3">
 		
-							<div class="span3 offset2">	
+							<div class="span5">
 							<%= search_form_for @search, url: area_listings_path(1) do |f| %>
 							<div class="search-bar">
-								<%= f.text_field :company_or_industry_or_first_name_or_last_name_or_zip_code_cont, :class=> "search-css", :placeholder => "Search" %>		
+								<%= f.text_field :company_or_industry_or_first_name_or_last_name_or_zip_code_cont, :class=> "search-css", :placeholder => "Search by keyword..." %>		
 							</div>
-								</div>	
-								
-									<div class="span3">	
-										
-										<div class="category-css">
-										<%= f.select :category_name_eq, options_for_select([['Choose a Category', ''], ['Profesionales'], ['Restaurantes'], ['Servicios'], ['Automotive'], ['Beauty'], ['Event Planning'], ['Doctors'], ['Home Services'], ['Hotels'], ['Nightlife'], ['Compras'], ['Organizations']], :class=> "category-css", :selected => :category_name) %>
-										</div>
-									</div>
+							</div>	
 							
-							<div class="actions"<%= f.submit %> </div>	
+							<div class="span1">
+								<div class="or">
+								or
+								</div>
+								</div>
+							
+							
+								<div class="span3">
+
+											<div class="category-css">
+											<%= f.select :category_name_eq, options_for_select([['Select Category', ''], ['Automotive'],['Beauty'],['Compras'],['Doctors'],['Event Planning'],['Home Services'], ['Hotels'],['Nightlife'], ['Organizations'], ['Profesionales'], ['Restaurantes'],['Servicios']], :class=> "category-css", :selected => :category_name) %>
+											</div>
+								</div>
+								
+								<div class="span3">
+											<div class="area-css">
+											<%= f.select :area_name_eq, options_for_select([['Select Location', ''], ['Brooklyn'], ['Bronx'],['Manhattan'], ['Queens'], ['Staten Island'], ['Nassau'], ['Suffolk']], :class=> "area-css", :selected => :area_name), {}, :onChange=>"javascript: this.form.apply_button_name.click();" %>
+											
+											<div class="apply-button">
+											        <%= f.submit "Apply", :name => "apply_button_name", :remote => "true" %>
+											    </div>
+											</div>
+								</div>
+								
+							<div class="actions"<%= f.submit %> 
+						
 							<% end %>
 							
-			
-	
-
-			<div class="span3">	
-						<div class="box-1-show">
-								<%= search_form_for @search, url: area_listings_path(1) do |f| %>
-								<div class="search-bar">
-									<%= text_field_tag :search, params[:search], :class=> "location-search-css", :placeholder => "Location" %>
-								</div>
-								<div class="actions"<%= f.submit %> </div>	
-								<% end %>
-							</div>				
-			</div>					
-		
-		
+							
+								
+			</div>
+		</div>
 	</div>
 
 </div>
@@ -99,19 +79,36 @@
 
 <div class="row-fluid">
 	<div class="span12">
-		<div class="black-box">
-			
-		
+		<div class="body-middle">
 			
 			<div class="row-fluid">
-			<div class="span12">
-				<div class="transition-index">
+				<div class="span8">
+					<div class="row-fluid">
+						<div class="span4">
+							<div class="body-middle-line-left">
+								</div>
+							</div>
+							<div class="span4">
+								<div class="body-middle-headline">
+								SEARCH RESULT
+								</div>
+								</div>
+							<div class="span4">
+								<div class="body-middle-line-right">
+									</div>
+								</div>
+						</div>
+				</div>
+					
+			
+
+				<div class="span4">
+					test
 					</div>
 				
-				
 			</div>	
-		    </div>
-			
+	
+		
 			
 		</div>
 	</div>	
@@ -146,22 +143,7 @@
 		<div class="span3">
 		<div class="box-right">
 			
-							<%= link_to category_path(16), :class=> "box-right4" do %>
-							<%= "Compras".upcase %>
-							<% end %>
-							
-							<%= link_to category_path(13), :class=> "box-right1" do %>
-							<%= "Profesionales".upcase %>
-							<% end %>
-							
-							<%= link_to category_path(14), :class=> "box-right2" do %>
-							<%= "Restaurantes".upcase %>
-							<% end %>
-							
-							<%= link_to category_path(15), :class=> "box-right3" do %>
-							<%= "Servicios".upcase %>
-							<% end %>
-							
+						
 			<div class="box-middle-line">	
 		</div>
 		</div>

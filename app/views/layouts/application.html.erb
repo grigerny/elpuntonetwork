@@ -27,7 +27,8 @@
 	<% if flash[:notice] %>
 	<p id="notice"><%= notice %></p>
 	 <% end %>
-	
+
+
 	
 <div class="row-fluid">
 <div class="span12">
@@ -44,23 +45,14 @@
 
 			<div class="span6">
 
-			<% unless @home_index %>	
-			<%= link_to "Back to Main Page", root_url %>
-
-			<br>
-
-			<% if user_signed_in? %>
-			  Logged in as <strong><%= current_user.email %></strong>.
-			  <%= link_to 'Edit profile', edit_user_registration_path %> |
-			  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-			<% else %>
-			  <%= link_to "Sign up", new_user_registration_path %> |
-			  <%= link_to "Login", new_user_session_path %>
-			<% end %>
-			<% end %>
-
-
-
+						<% if user_signed_in? %>
+						  Logged in as <strong><%= current_user.email %></strong>.
+						  <%= link_to 'Edit profile', edit_user_registration_path %> |
+						  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+						<% else %>
+						  <%= link_to "Sign up", new_user_registration_path %> |
+						  <%= link_to "Login", new_user_session_path %>
+						<% end %>
 			</div>
 
 		</div>
