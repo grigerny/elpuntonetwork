@@ -120,13 +120,18 @@
 					<div class="row-fluid">
 
 						<div class="span6">
+								
 								<% if !listing.reference.blank? %>
 								<% @client = GooglePlaces::Client.new("AIzaSyAKv_excTcghTEiiJ9br1J6977E7uDGu8k") %>
 								<% @client.spots("#{listing.latitude}","#{listing.longitude}", :name => "#{listing.company}") %>
 								<% @spot = @client.spot("#{listing.reference}") rescue nil%>
 								<% url = @spot.photos[0].fetch_url(800) rescue nil%>
-								<div class="photo">
-								<%= image_tag(url) rescue nil %>
+								<div class="photo">						
+								<%= image_tag(url) %>
+								</div>
+								<% else %>
+								<div class="photo">	
+								<%= image_tag('Image_coming_soon.png') %>
 								</div>
 								<% end %>
 										
