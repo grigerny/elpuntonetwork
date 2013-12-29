@@ -38,7 +38,7 @@
 	
 <div class="row-fluid no-space">
 
-		<div class="span2">	
+	<div class="span2">	
 			<div class="industry-box-wrapper">
 			<div class="industry-box-top">
 			</div>	
@@ -63,12 +63,16 @@
 		</div>	
 		
 
-<div class="span4">
+	<div class="span10">
 	<div class="row-fluid">
 	<div class="category-show-headline">
 	<%= @category.name %> in Nueva York
+	<hr>
 	</div>
 	</div>
+
+	
+	<div class="span6">
 	
 	<% @grouped_listing.each do |category, listings| %>
 	
@@ -76,7 +80,7 @@
 	<div class="industry-badge-show">
  	<%= category %> 
 	</div>
-	</div>
+	</div>	
 	
 		<% listings.each do |listing| %>
 	
@@ -126,14 +130,11 @@
 		
 		<% end %>
 			<% end %>				
-				
-			
-</div>
-
-
-<div class="span4">
-
+	</div>		
 	</div>
+
+
+	
 	
 </div>
 

@@ -1,3 +1,18 @@
+.location-search-css{
+  margin-left:-130px !important;
+  width:100%;
+  border:none !important;
+  font-family:"Helvetica";
+  font-size: 18px !important;
+  height:30px !important;
+  font-color:black !important;
+  -moz-box-shadow: inset 0 0 5px #888 !important;
+  -webkit-box-shadow: inset 0 0 5px#888 !important;
+  box-shadow: inner 0 0 5px #888 !important;
+  border-top-right-radius:10px !important;
+}
+
+
 .search-css{
   width:100%;
   border:none !important;
@@ -8,7 +23,7 @@
   -moz-box-shadow: inset 0 0 5px #888 !important;
   -webkit-box-shadow: inset 0 0 5px#888 !important;
   box-shadow: inner 0 0 5px #888 !important;
-  border-radius:10px !important;
+  border-top-left-radius:10px !important;
 }
 
 .search-css:hover{

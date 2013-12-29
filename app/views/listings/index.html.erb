@@ -107,9 +107,9 @@
 						<% if !listing.phone.blank? -%>
 						<%= number_to_phone(listing.phone, area_code: true) %><br>
 						<% end %>  
-						<% if !listing.website.blank? -%>
-						<%= link_to "Website", "#{listing.website}"%><br>
-						<% end %>  
+							<% if !listing.website.blank? -%>
+							<%= link_to listing.website.sub(/^https?\:\/\//, '').sub(/^www./,''), "#{listing.website}"%><br>
+							<% end %>
 
 						</div>
 					

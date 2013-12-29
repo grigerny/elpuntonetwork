@@ -3,12 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .industry-badge-show{
-	padding-top:10px;
+	float:left;
+	padding-bottom:-5px;
+	padding:10px;
 	font-size:16px;
-	color:rgba(139, 139, 139, 1.000);
-	height:35px;
-	padding-left:10px;
-
+	background:rgba(51, 60, 67, 1.000);
+	color:rgba(255, 195, 0, 1.000);
+	height:20px;
+	margin-top:20px;
+	border-radius:20px;
+	margin-left:10px;
 }
 
 .listing-show-headline{
@@ -59,7 +63,7 @@
 
 #directory-list-show{
 		padding:10px;
-		background:rgba(252, 252, 252, 1.000);
+		border-bottom:1px solid rgba(204, 204, 200, 1.000);
 }
 
 .css-overlap-wrapper{

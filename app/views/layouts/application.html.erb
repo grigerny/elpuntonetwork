@@ -27,53 +27,48 @@
 	<% if flash[:notice] %>
 	<p id="notice"><%= notice %></p>
 	 <% end %>
-
-	<div class="fluid-row">
-		<div class='span10'>
 	
-		<% if @home_index %>
-			<div class="pure-menu pure-menu-open pure-menu-horizontal">
-	    <li class="pure-menu-heading">
-		<%= link_to root_path, :class=> "brand-css" do %>
-			<%= image_tag ('mainlogo.png') %>
+	
+<div class="row-fluid">
+<div class="span12">
+	<div class="top-nav">
+		
+		<div class="fluid-row">
+			<div class='span6'>
+
+			<%= link_to root_path, :class=> "brand" do %>
+				<%= image_tag ('mainlogo.png') %>
+				<% end %>
+			</div>
+
+
+			<div class="span6">
+
+			<% unless @home_index %>	
+			<%= link_to "Back to Main Page", root_url %>
+
+			<br>
+
+			<% if user_signed_in? %>
+			  Logged in as <strong><%= current_user.email %></strong>.
+			  <%= link_to 'Edit profile', edit_user_registration_path %> |
+			  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+			<% else %>
+			  <%= link_to "Sign up", new_user_registration_path %> |
+			  <%= link_to "Login", new_user_session_path %>
 			<% end %>
-		</li>
-	
-	   <% else %>
-			<div class="pure-menu pure-menu-open pure-menu-horizontal">
-	    <li class="pure-menu-heading">
-		<%= link_to categories_path, :class=> "epnlogocss" do %>
-			<%= image_tag ('epnlogo.png') %>
-	  	<% end %>
-	</li>
-		<% end %>
-	</div>
+			<% end %>
+
+
+
+			</div>
+
 		</div>
 		
 		
-		<div class="span2">
-		
-		<% unless @home_index %>	
-		<%= link_to "Back to Main Page", root_url %>
-
-		<br>
-		
-		<% if user_signed_in? %>
-		  Logged in as <strong><%= current_user.email %></strong>.
-		  <%= link_to 'Edit profile', edit_user_registration_path %> |
-		  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-		<% else %>
-		  <%= link_to "Sign up", new_user_registration_path %> |
-		  <%= link_to "Login", new_user_session_path %>
-		<% end %>
-		<% end %>
-		
-
-		
 		</div>
-		
 	</div>	
-	
+	</div>	
 	
 	
 	

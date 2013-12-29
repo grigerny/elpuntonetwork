@@ -6,6 +6,12 @@
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
  */
+
+.top-nav{
+	background-size: 100%;
+	background: url('dimension.png') fixed;
+	height:100px;
+}
 body {
     background-color: white;
     font-family: 'Helvetica';
@@ -24,14 +30,13 @@ p {
 li.brand-css{
 	text-decoration:none !important;
 }
-.brand-css{
-	width:50%;
+
+.brand{
+	position: absolute;
+	width:25%;
 	margin-top:0px;
 	padding:20px;
-}
-.brand-css:hover{
-	text-decoration:none !important;
-	background:none !important;
+	height:40px;
 }
 
 /*

@@ -26,6 +26,7 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
     @search = Listing.search(params[:q])
     @listings = @search.result
+
  
     
     if params[:search].present?
