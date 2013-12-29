@@ -62,15 +62,15 @@
 
 
 #directory-list-show{
-		padding:10px;
-		border-bottom:1px solid rgba(204, 204, 200, 1.000);
+	padding:10px;
+	border-bottom:1px solid rgba(204, 204, 200, 1.000);
 }
 
 .css-overlap-wrapper{
 	width:100%;
 	height: auto;
     position: relative;
-	background: rgba(252, 252, 252, 1.000);;
+	background: rgba(252, 252, 252, 1.000);
 }
 
 #category-list-listing-show{
@@ -87,7 +87,6 @@
 	padding:10px;
 	height:100%;
 	background:white;
-	border-bottom:1px solid rgba(204, 204, 200, 1.000);
    
 }
 
@@ -173,7 +172,7 @@
 }
 
 .photo{
-	float:right;
+	float:left;
 	max-width:150px;
 	max-height:150px;
 }

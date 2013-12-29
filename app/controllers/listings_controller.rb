@@ -7,6 +7,14 @@ class ListingsController < ApplicationController
     @categories = Category.all
     @search = Listing.search(params[:q])      
     @listings = @search.result
+      @hash = Gmaps4rails.build_markers(@listings) do |listing, marker|
+        marker.lat listing.latitude
+        marker.lng listing.longitude
+        marker.picture({
+               "url" => "http://i.imgur.com/DkGmkTs.png",
+               "width" =>  60,
+               "height" => 60})
+      end
   
     
      if params[:search].present?
