@@ -12,7 +12,6 @@
   border-top-right-radius:10px !important;
 }
 
-
 .search-css{
   margin-top:20px;
   width:100%;
@@ -20,7 +19,6 @@
   font-family:"Helvetica";
   font-size: 16px !important;
   height:30px !important;
-  font-color:black !important;
   -moz-box-shadow: inset 0 0 5px #888 !important;
   -webkit-box-shadow: inset 0 0 5px#888 !important;
   box-shadow: inner 0 0 5px #888 !important;
@@ -28,12 +26,11 @@
 
 }
 
-.search-css:hover{
+.search-css:focus{
+    outline: none !important;
+    background:rgba(51, 60, 67, 1.000) !important;
 }
 
 .search-bar{
- margin-bottom:-10px;
-}
-
-.search-bar:hover{
+ 	margin-bottom:-10px;
 }
