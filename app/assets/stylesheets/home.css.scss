@@ -10,7 +10,7 @@
 .top-nav{
 	background-size: 100%;
 	background: url('dimension.png') fixed;
-	height:100px;
+	height:120px;
 }
 body {
     background-color: white;
@@ -337,3 +337,64 @@ li.brand-css{
 	text-decoration:none !important;
 }
 
+.menu-wrapper{
+	padding:40px;
+
+}
+
+.menu-home{
+	font-size:20px;
+	text-decoration:none !important;
+	color:black;
+	font-weight:800;
+}
+
+.menu-blog{
+	margin:40px;
+	font-size:20px;
+	text-decoration:none !important;
+	color:black;
+	font-weight:800;
+}
+
+.epg-white{
+	margin-top:20px;
+	margin-left:20px;
+	width:70%;
+}
+
+.cash-white{
+	margin-top:20px;
+	margin-left:30px;
+	width:40%;
+}
+
+.network-white{
+	margin-top:20px;
+	margin-left:60px;
+	width:70%;
+}
+
+.icon-caption{
+	font-size:18px;
+	margin-top:-20px;
+	text-align:center;
+	padding:10px;
+      
+}
+
+.icon-wrapper{
+	text-align:center;
+	border-left:1px solid rgba(49, 59, 64, 1.000);
+	border-right:1px solid rgba(49, 59, 64, 1.000);
+}
+
+.left-wrapper{
+	background:rgba(239, 239, 239, 1.000);
+	height:592px;
+}
+
+.right-wrapper{
+	background:rgba(239, 239, 239, 1.000);
+	height:592px;
+}

@@ -382,13 +382,13 @@
 }
 
 .body-middle-line-left{
-	margin-top:60px;
+	margin-top:20px;
 	height:10px;
 	background: url('dimension.png') fixed;
 }
 
 .body-middle-line-right{
-	margin-top:60px;
+	margin-top:20px;
 	height:10px;
 	background: url('dimension.png') fixed;
 }
@@ -396,7 +396,7 @@
 .body-middle-headline{
 	font-size:20px;
 	text-align:center;
-	margin-top:60px;
+	margin-top:20px;
 	font-weight:800;
 	color:rgba(51, 60, 67, 1.000);
 	letter-spacing:2px;
@@ -407,7 +407,13 @@
 }
 
 .or{
-	margin-left:25px;
-	margin-top:25px;
+	margin-left:-5px;
+	padding:30px;
 	font-size:26px;
+}
+
+.bar-2{
+	text-align:center;
+	height:80px;
+	background:rgba(49, 59, 63, 1.000);
 }

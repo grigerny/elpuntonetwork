@@ -35,7 +35,7 @@
 	<div class="top-nav">
 		
 		<div class="fluid-row">
-			<div class='span6'>
+			<div class='span4'>
 
 			<%= link_to root_path, :class=> "brand" do %>
 				<%= image_tag ('mainlogo.png') %>
@@ -43,18 +43,30 @@
 			</div>
 
 
-			<div class="span6">
-
-						<% if user_signed_in? %>
-						  Logged in as <strong><%= current_user.email %></strong>.
-						  <%= link_to 'Edit profile', edit_user_registration_path %> |
-						  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-						<% else %>
-						  <%= link_to "Sign up", new_user_registration_path %> |
-						  <%= link_to "Login", new_user_session_path %>
+			<div class="span8">
+				
+				<div class="menu-wrapper">
+				<div class="span2">
+					<%= link_to root_path, :class => "menu-home" do %>
+					<%= "HOME" %>
+					<% end %>
+					</div>
+					<div class="span2">
+						<%= link_to root_path, :class => "menu-blog" do %>
+						<%= "BLOG" %>
 						<% end %>
+						</div>
+					<div class="span6 offset2">
+							<% if user_signed_in? %>
+							  Logged in as <b><%= current_user.email %></b>
+							  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+							<% else %>
+							  <%= link_to "Sign up", new_user_registration_path %> |
+							  <%= link_to "Login", new_user_session_path %>
+							<% end %>
+						</div>
+					</div>	
 			</div>
-
 		</div>
 		
 		

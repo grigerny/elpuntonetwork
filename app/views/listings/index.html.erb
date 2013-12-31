@@ -77,31 +77,91 @@
 	<div class="span12">
 		<div class="body-middle">
 			
+			
+			<div class="span3">
+				<div class="left-wrapper">
+				</div>
+			</div>
+			
 			<div class="row-fluid">
-				<div class="span9 offset1">
+				<div class="span6">
 					<div class="row-fluid">
-						<div class="span3">
-							<div class="body-middle-line-left">
-								</div>
-							</div>
 							<div class="span3">
+							</div>
+							<div class="span6">
 								<div class="body-middle-headline">
 								SEARCH RESULTS
 								</div>
-								</div>
+								
+							</div>
 							<div class="span3">
-								<div class="body-middle-line-right">
+							</div>
+					</div>
+					
+					<div class="row-fluid">
+						<% @listings.each do |listing| %>
+
+							<div id="listing-list-show">
+
+									<div class="row-fluid">
+
+										<div class="span12">
+
+												<% if !listing.reference.blank? %>
+												<% @client = GooglePlaces::Client.new("AIzaSyAKv_excTcghTEiiJ9br1J6977E7uDGu8k") %>
+												<% @client.spots("#{listing.latitude}","#{listing.longitude}", :name => "#{listing.company}") %>
+												<% @spot = @client.spot("#{listing.reference}") rescue nil%>
+												<% url = @spot.photos[0].fetch_url(800) rescue nil%>
+												<div class="photo">						
+												<%= image_tag(url) %>
+												</div>
+												<% else %>
+												<div class="photo">	
+												<%= image_tag('Image_coming_soon.png') %>
+												</div>
+												<% end %>
+
+											<div id="listing-name-css">	
+												<div id="listing-company-css">
+											<%= link_to area_listing_path(listing.area_id,listing), :class =>"listing-company-css" do %>		
+											<%= listing.company %><br>
+											<% end %>
+											</div>
+
 									</div>
-								</div>
-						</div>
+										<% if !listing.address1.blank? -%>
+									 	<%= listing.address1 %><br>
+										<% end %>
+										<% if !listing.address2.blank? -%>
+										<%= listing.address2 %><br>
+										<% end %>
+										<% if !listing.city.blank? -%>
+										<%= listing.city  %>
+										<% end %> 
+										<% if !listing.state.blank? -%>
+										<%= listing.state  %>
+										<% end %>  
+										<%= listing.zip_code %><br>
+										<% if !listing.phone.blank? -%>
+										<%= number_to_phone(listing.phone, area_code: true) %><br>
+										<% end %>  
+											<% if !listing.website.blank? -%>
+											<%= link_to listing.website.sub(/^https?\:\/\//, '').sub(/^www./,''), "#{listing.website}"%><br>
+											<% end %>
+
+									</div>
+								</div>			
+							</div>
+						<% end %>
+					</div>
 				</div>
 					
 			
 
-				<div class="span3">
-				
-					</div>
-				
+				   <div class="span3">
+						<div class="right-wrapper">
+						</div>
+				    </div>
 			</div>	
 	
 		
@@ -110,67 +170,11 @@
 	</div>	
 </div>
 		
-<div class="row-fluid no-space">
-<div class="span9 offset1">
-		
-		<% @listings.each do |listing| %>
-	
-			<div id="listing-list-show">
-	
-					<div class="row-fluid">
 
-						<div class="span6">
-								
-								<% if !listing.reference.blank? %>
-								<% @client = GooglePlaces::Client.new("AIzaSyAKv_excTcghTEiiJ9br1J6977E7uDGu8k") %>
-								<% @client.spots("#{listing.latitude}","#{listing.longitude}", :name => "#{listing.company}") %>
-								<% @spot = @client.spot("#{listing.reference}") rescue nil%>
-								<% url = @spot.photos[0].fetch_url(800) rescue nil%>
-								<div class="photo">						
-								<%= image_tag(url) %>
-								</div>
-								<% else %>
-								<div class="photo">	
-								<%= image_tag('Image_coming_soon.png') %>
-								</div>
-								<% end %>
-										
-							<div id="listing-name-css">	
-								<div id="listing-company-css">
-							<%= link_to area_listing_path(listing.area_id,listing), :class =>"listing-company-css" do %>		
-							<%= listing.company %><br>
-							<% end %>
-							</div>
-					
-					</div>
-						<% if !listing.address1.blank? -%>
-					 	<%= listing.address1 %><br>
-						<% end %>
-						<% if !listing.address2.blank? -%>
-						<%= listing.address2 %><br>
-						<% end %>
-						<% if !listing.city.blank? -%>
-						<%= listing.city  %>
-						<% end %> 
-						<% if !listing.state.blank? -%>
-						<%= listing.state  %>
-						<% end %>  
-						<%= listing.zip_code %><br>
-						<% if !listing.phone.blank? -%>
-						<%= number_to_phone(listing.phone, area_code: true) %><br>
-						<% end %>  
-							<% if !listing.website.blank? -%>
-							<%= link_to listing.website.sub(/^https?\:\/\//, '').sub(/^www./,''), "#{listing.website}"%><br>
-							<% end %>
-
-					</div>
-				</div>			
-			</div>
-		<% end %>
 		
-</div>
-	
-</div>
+
+		
+
 
 
 	
