@@ -15,6 +15,7 @@
 body {
     background-color: white;
     font-family: 'Helvetica';
+	height: 100%;
 }
 
 h2, h3 {
@@ -365,7 +366,7 @@ li.brand-css{
 
 .cash-white{
 	margin-top:20px;
-	margin-left:30px;
+	margin-left:40px;
 	width:40%;
 }
 
@@ -387,7 +388,15 @@ li.brand-css{
 	text-align:center;
 	border-left:1px solid rgba(49, 59, 64, 1.000);
 	border-right:1px solid rgba(49, 59, 64, 1.000);
+	background:white;
 }
+
+.icon-wrapper-listings{
+	border-left:1px solid rgba(49, 59, 64, 1.000);
+	border-right:1px solid rgba(49, 59, 64, 1.000);
+	background:white;
+}
+
 
 .left-wrapper{
 	background:rgba(239, 239, 239, 1.000);
@@ -397,4 +406,11 @@ li.brand-css{
 .right-wrapper{
 	background:rgba(239, 239, 239, 1.000);
 	height:592px;
+}
+
+.icon-outside-wrapper{
+	background:rgba(239, 239, 239, 1.000);
+	height: auto !important; /* ie 6 will ignore this */
+	height: 100%;            /* ie 6 will use this instead of min-height */
+	min-height: 100%;        /* ie 6 will ignore this */
 }
