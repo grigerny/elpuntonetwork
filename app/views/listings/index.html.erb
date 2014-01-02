@@ -90,12 +90,13 @@
 							<div class="span6">
 								<div class="body-middle-headline">
 								SEARCH RESULTS
-								</div>
-								
+								</div>		
 							</div>
 							<div class="span3">
 							</div>
 					</div>
+					
+					<%= will_paginate @listing %>
 					
 					<div class="row-fluid">
 						<% @listings.each do |listing| %>
@@ -152,6 +153,7 @@
 								</div>			
 							</div>
 						<% end %>
+						<%= will_paginate @listing %>
 					</div>
 					</div>
 				</div>

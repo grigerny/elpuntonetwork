@@ -5,9 +5,9 @@ class ListingsController < ApplicationController
   
   def index
     @categories = Category.all
-    @search = Listing.search(params[:q])      
-    @listings = @search.result
-      @hash = Gmaps4rails.build_markers(@listings) do |listing, marker|
+    @search = Listing.search(params[:q])
+    @listings = @search.result.paginate(:page => params[:page], :per_page => 5 )
+    @hash = Gmaps4rails.build_markers(@listings) do |listing, marker|
         marker.lat listing.latitude
         marker.lng listing.longitude
         location_link = view_context.link_to listing.company, area_listing_path(listing.area_id,listing)
